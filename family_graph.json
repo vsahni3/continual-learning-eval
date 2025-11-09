@@ -1,0 +1,5438 @@
+{
+  "families": [
+    {
+      "members": [
+        "Melissa Bigley",
+        "Emily Bigley",
+        "Helen Bigley",
+        "Michael Bigley",
+        "Edwin Bigley"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_1990-03-15_718529"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2006-06-01_717029"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2010-05-20_318695"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2011-02-10_953830"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2015-09-30_621450"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2017-11-25_575880"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2019-07-12_775526"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2021-03-05_306628"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2022-12-10_135686"
+        },
+        {
+          "type": "had_event",
+          "src": "Emily Bigley",
+          "dst": "Emily Bigley_2023-08-20_350173"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_1985-03-15_290230"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_1991-09-01_393561"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2003-06-10_69966"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2007-05-20_264476"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2011-08-25_866911"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2015-05-02_5564"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2016-02-10_66693"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2019-11-30_774455"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2022-07-15_71340"
+        },
+        {
+          "type": "had_event",
+          "src": "Edwin Bigley",
+          "dst": "Edwin Bigley_2023-04-20_103327"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_1985-03-12_491936"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_1991-09-05_87113"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2003-06-15_950405"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2007-08-20_575802"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2011-05-30_808175"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2015-10-10_223945"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2017-02-22_14322"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2020-03-01_1789"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2022-12-25_111675"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Bigley",
+          "dst": "Michael Bigley_2023-06-15_23078"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_1990-03-15_599686"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2006-06-01_367001"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2010-09-20_566065"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2012-05-10_826311"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2014-12-15_105723"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2015-02-03_450891"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2018-11-30_75394"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2020-07-12_476358"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2021-09-05_990423"
+        },
+        {
+          "type": "had_event",
+          "src": "Melissa Bigley",
+          "dst": "Melissa Bigley_2023-04-22_996293"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_1990-03-15_765448"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2006-06-01_865215"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2010-09-20_993294"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2012-08-10_34996"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2014-05-18_88190"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2015-02-03_225010"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2018-11-25_511378"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2020-07-12_396481"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2022-04-05_161666"
+        },
+        {
+          "type": "had_event",
+          "src": "Helen Bigley",
+          "dst": "Helen Bigley_2023-09-30_448392"
+        },
+        {
+          "type": "relationship",
+          "src": "Melissa Bigley",
+          "dst": "Michael Bigley",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Emily Bigley",
+          "dst": "Melissa Bigley",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Helen Bigley",
+          "dst": "Michael Bigley",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Michael Bigley",
+          "dst": "Emily Bigley",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Edwin Bigley",
+          "dst": "Helen Bigley",
+          "relationship": "brother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Emily Bigley_1990-03-15_718529",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Emily Bigley was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Emily Bigley_2006-06-01_717029",
+          "type": "event",
+          "time": "2006-06-01",
+          "title": "High School Graduation",
+          "description": "Graduated from Maplewood High School with honors, receiving a scholarship for academic excellence."
+        },
+        {
+          "id": "Emily Bigley_2010-05-20_318695",
+          "type": "event",
+          "time": "2010-05-20",
+          "title": "College Graduation",
+          "description": "Earned a Bachelor's degree in Computer Science from the University of Michigan, Ann Arbor."
+        },
+        {
+          "id": "Emily Bigley_2011-02-10_953830",
+          "type": "event",
+          "time": "2011-02-10",
+          "title": "First Job",
+          "description": "Started working as a software developer at TechInnovate Solutions in San Francisco, CA."
+        },
+        {
+          "id": "Emily Bigley_2015-09-30_621450",
+          "type": "event",
+          "time": "2015-09-30",
+          "title": "Promotion",
+          "description": "Promoted to Senior Software Engineer at TechInnovate Solutions, leading a team of developers."
+        },
+        {
+          "id": "Emily Bigley_2017-11-25_575880",
+          "type": "event",
+          "time": "2017-11-25",
+          "title": "Marriage",
+          "description": "Married long-time partner, James Carter, in a beautiful ceremony in Napa Valley, CA."
+        },
+        {
+          "id": "Emily Bigley_2019-07-12_775526",
+          "type": "event",
+          "time": "2019-07-12",
+          "title": "First Child",
+          "description": "Welcomed their first child, a daughter named Sophia, into the family."
+        },
+        {
+          "id": "Emily Bigley_2021-03-05_306628",
+          "type": "event",
+          "time": "2021-03-05",
+          "title": "Career Change",
+          "description": "Left TechInnovate Solutions to co-found a startup, EcoTech Solutions, focusing on sustainable technology."
+        },
+        {
+          "id": "Emily Bigley_2022-12-10_135686",
+          "type": "event",
+          "time": "2022-12-10",
+          "title": "Award Recognition",
+          "description": "Received the 'Innovator of the Year' award at the Global Tech Awards for contributions to sustainable technology."
+        },
+        {
+          "id": "Emily Bigley_2023-08-20_350173",
+          "type": "event",
+          "time": "2023-08-20",
+          "title": "Second Child",
+          "description": "Welcomed their second child, a son named Ethan, into the family."
+        },
+        {
+          "id": "Edwin Bigley_1985-03-15_290230",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "Edwin Bigley was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Edwin Bigley_1991-09-01_393561",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Edwin started his first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Edwin Bigley_2003-06-10_69966",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation from Middle School",
+          "description": "Edwin graduated from Maplewood Middle School with honors and was awarded the 'Student of the Year' title."
+        },
+        {
+          "id": "Edwin Bigley_2007-05-20_264476",
+          "type": "event",
+          "time": "2007-05-20",
+          "title": "High School Graduation",
+          "description": "Edwin graduated from Maplewood High School as the valedictorian of his class."
+        },
+        {
+          "id": "Edwin Bigley_2011-08-25_866911",
+          "type": "event",
+          "time": "2011-08-25",
+          "title": "College Enrollment",
+          "description": "Edwin enrolled at the University of Michigan to pursue a degree in Computer Science."
+        },
+        {
+          "id": "Edwin Bigley_2015-05-02_5564",
+          "type": "event",
+          "time": "2015-05-02",
+          "title": "College Graduation",
+          "description": "Edwin graduated from the University of Michigan with a Bachelor's degree in Computer Science, summa cum laude."
+        },
+        {
+          "id": "Edwin Bigley_2016-02-10_66693",
+          "type": "event",
+          "time": "2016-02-10",
+          "title": "First Job",
+          "description": "Edwin started his first job as a software engineer at a tech startup in San Francisco."
+        },
+        {
+          "id": "Edwin Bigley_2019-11-30_774455",
+          "type": "event",
+          "time": "2019-11-30",
+          "title": "Marriage",
+          "description": "Edwin married his long-time girlfriend, Sarah, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Edwin Bigley_2022-07-15_71340",
+          "type": "event",
+          "time": "2022-07-15",
+          "title": "Promotion",
+          "description": "Edwin was promoted to Senior Software Engineer at his company, recognizing his exceptional contributions to several key projects."
+        },
+        {
+          "id": "Edwin Bigley_2023-04-20_103327",
+          "type": "event",
+          "time": "2023-04-20",
+          "title": "First Child",
+          "description": "Edwin and Sarah welcomed their first child, a baby girl named Emily, into the world."
+        },
+        {
+          "id": "Michael Bigley_1985-03-12_491936",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Michael Bigley was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Michael Bigley_1991-09-05_87113",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "Michael started his first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Michael Bigley_2003-06-15_950405",
+          "type": "event",
+          "time": "2003-06-15",
+          "title": "Graduation from Middle School",
+          "description": "Michael graduated from Maplewood Middle School with honors and was awarded the 'Student of the Year' title."
+        },
+        {
+          "id": "Michael Bigley_2007-08-20_575802",
+          "type": "event",
+          "time": "2007-08-20",
+          "title": "High School Graduation",
+          "description": "Michael graduated from Maplewood High School as valedictorian and received a full scholarship to the University of Michigan."
+        },
+        {
+          "id": "Michael Bigley_2011-05-30_808175",
+          "type": "event",
+          "time": "2011-05-30",
+          "title": "College Graduation",
+          "description": "Michael graduated from the University of Michigan with a Bachelor's degree in Computer Science and was hired by Google as a software engineer."
+        },
+        {
+          "id": "Michael Bigley_2015-10-10_223945",
+          "type": "event",
+          "time": "2015-10-10",
+          "title": "Marriage",
+          "description": "Michael married his long-time girlfriend, Sarah, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Michael Bigley_2017-02-22_14322",
+          "type": "event",
+          "time": "2017-02-22",
+          "title": "First Child",
+          "description": "Michael and Sarah welcomed their first child, a baby girl named Emily, into the world."
+        },
+        {
+          "id": "Michael Bigley_2020-03-01_1789",
+          "type": "event",
+          "time": "2020-03-01",
+          "title": "Promotion",
+          "description": "Michael was promoted to Senior Software Engineer at Google and led a team of developers to launch a new product."
+        },
+        {
+          "id": "Michael Bigley_2022-12-25_111675",
+          "type": "event",
+          "time": "2022-12-25",
+          "title": "Family Vacation",
+          "description": "Michael and his family took a dream vacation to Hawaii, where they enjoyed surfing, hiking, and relaxing on the beach."
+        },
+        {
+          "id": "Michael Bigley_2023-06-15_23078",
+          "type": "event",
+          "time": "2023-06-15",
+          "title": "Community Service Award",
+          "description": "Michael was awarded the 'Community Service Award' for his outstanding contributions to local charities and non-profit organizations."
+        },
+        {
+          "id": "Melissa Bigley_1990-03-15_599686",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Melissa Bigley was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Melissa Bigley_2006-06-01_367001",
+          "type": "event",
+          "time": "2006-06-01",
+          "title": "High School Graduation",
+          "description": "Melissa graduated from her local high school with honors, excelling in science and mathematics."
+        },
+        {
+          "id": "Melissa Bigley_2010-09-20_566065",
+          "type": "event",
+          "time": "2010-09-20",
+          "title": "College Enrollment",
+          "description": "She began her undergraduate studies at the University of Michigan, majoring in Computer Science."
+        },
+        {
+          "id": "Melissa Bigley_2012-05-10_826311",
+          "type": "event",
+          "time": "2012-05-10",
+          "title": "First Internship",
+          "description": "Melissa secured her first internship at a tech startup in Ann Arbor, gaining valuable experience in software development."
+        },
+        {
+          "id": "Melissa Bigley_2014-12-15_105723",
+          "type": "event",
+          "time": "2014-12-15",
+          "title": "Bachelor's Degree",
+          "description": "She graduated with a Bachelor's degree in Computer Science, achieving a GPA of 3.8."
+        },
+        {
+          "id": "Melissa Bigley_2015-02-03_450891",
+          "type": "event",
+          "time": "2015-02-03",
+          "title": "First Job",
+          "description": "Melissa started her first full-time job as a software engineer at a leading tech company in San Francisco."
+        },
+        {
+          "id": "Melissa Bigley_2018-11-30_75394",
+          "type": "event",
+          "time": "2018-11-30",
+          "title": "Promotion",
+          "description": "She was promoted to Senior Software Engineer, recognizing her contributions to several successful projects."
+        },
+        {
+          "id": "Melissa Bigley_2020-07-12_476358",
+          "type": "event",
+          "time": "2020-07-12",
+          "title": "Marriage",
+          "description": "Melissa married her long-time partner, John, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Melissa Bigley_2021-09-05_990423",
+          "type": "event",
+          "time": "2021-09-05",
+          "title": "First Child",
+          "description": "She gave birth to her first child, a baby girl named Emma, marking a new chapter in her life."
+        },
+        {
+          "id": "Melissa Bigley_2023-04-22_996293",
+          "type": "event",
+          "time": "2023-04-22",
+          "title": "Entrepreneurial Venture",
+          "description": "Melissa co-founded a tech startup focused on developing innovative educational software, leveraging her expertise and passion for technology."
+        },
+        {
+          "id": "Helen Bigley_1990-03-15_765448",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Helen Bigley was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Helen Bigley_2006-06-01_865215",
+          "type": "event",
+          "time": "2006-06-01",
+          "title": "High School Graduation",
+          "description": "Helen graduated from her local high school with honors, excelling in science and mathematics."
+        },
+        {
+          "id": "Helen Bigley_2010-09-20_993294",
+          "type": "event",
+          "time": "2010-09-20",
+          "title": "College Enrollment",
+          "description": "She began her undergraduate studies in Computer Science at the University of California, Berkeley."
+        },
+        {
+          "id": "Helen Bigley_2012-08-10_34996",
+          "type": "event",
+          "time": "2012-08-10",
+          "title": "Summer Internship",
+          "description": "Helen secured a competitive internship at a tech startup in Silicon Valley, gaining valuable industry experience."
+        },
+        {
+          "id": "Helen Bigley_2014-05-18_88190",
+          "type": "event",
+          "time": "2014-05-18",
+          "title": "Bachelor's Degree",
+          "description": "She graduated with a Bachelor of Science in Computer Science, receiving multiple job offers from top tech companies."
+        },
+        {
+          "id": "Helen Bigley_2015-02-03_225010",
+          "type": "event",
+          "time": "2015-02-03",
+          "title": "First Job",
+          "description": "Helen started her career as a software engineer at a renowned tech firm in Seattle, Washington."
+        },
+        {
+          "id": "Helen Bigley_2018-11-25_511378",
+          "type": "event",
+          "time": "2018-11-25",
+          "title": "Promotion",
+          "description": "Due to her exceptional performance, Helen was promoted to Senior Software Engineer, leading a team of developers."
+        },
+        {
+          "id": "Helen Bigley_2020-07-12_396481",
+          "type": "event",
+          "time": "2020-07-12",
+          "title": "Marriage",
+          "description": "She married her long-time partner, Michael, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Helen Bigley_2022-04-05_161666",
+          "type": "event",
+          "time": "2022-04-05",
+          "title": "Entrepreneurial Venture",
+          "description": "Helen co-founded a tech startup focused on sustainable energy solutions, serving as the CTO."
+        },
+        {
+          "id": "Helen Bigley_2023-09-30_448392",
+          "type": "event",
+          "time": "2023-09-30",
+          "title": "Industry Award",
+          "description": "Helen received the 'Young Innovator of the Year' award for her contributions to green technology."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Monica Schoenthal",
+        "James Schoenthal",
+        "Maria Schoenthal"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_1985-03-15_368366"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_1991-09-01_243743"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2003-06-10_402841"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2007-05-20_820182"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2011-08-25_330848"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2015-05-02_809149"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2016-02-10_219428"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2019-11-30_18662"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2022-07-15_284491"
+        },
+        {
+          "type": "had_event",
+          "src": "James Schoenthal",
+          "dst": "James Schoenthal_2023-04-20_796593"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_1985-03-12_3024"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_1991-09-01_382303"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_1998-06-15_648252"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2003-07-22_129523"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2004-10-05_101693"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2008-03-30_830922"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2010-12-18_465232"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2012-02-14_443895"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2015-08-25_966216"
+        },
+        {
+          "type": "had_event",
+          "src": "Monica Schoenthal",
+          "dst": "Monica Schoenthal_2018-11-10_806818"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_1985-03-15_224666"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_1991-09-01_996018"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2000-06-20_16520"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2003-11-10_165397"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2007-05-25_709371"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2011-09-01_729030"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2014-03-12_817435"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2016-07-20_893956"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2019-12-30_4094"
+        },
+        {
+          "type": "had_event",
+          "src": "Maria Schoenthal",
+          "dst": "Maria Schoenthal_2022-08-15_232205"
+        },
+        {
+          "type": "relationship",
+          "src": "Monica Schoenthal",
+          "dst": "Maria Schoenthal",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "James Schoenthal",
+          "dst": "Maria Schoenthal",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Maria Schoenthal",
+          "dst": "Monica Schoenthal",
+          "relationship": "sister"
+        }
+      ],
+      "events": [
+        {
+          "id": "James Schoenthal_1985-03-15_368366",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "James Schoenthal was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "James Schoenthal_1991-09-01_243743",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "James started his first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "James Schoenthal_2003-06-10_402841",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation from Middle School",
+          "description": "James graduated from Maplewood Middle School with honors and was awarded the 'Student of the Year' title."
+        },
+        {
+          "id": "James Schoenthal_2007-05-20_820182",
+          "type": "event",
+          "time": "2007-05-20",
+          "title": "High School Graduation",
+          "description": "James graduated from Maplewood High School as the valedictorian of his class."
+        },
+        {
+          "id": "James Schoenthal_2011-08-25_330848",
+          "type": "event",
+          "time": "2011-08-25",
+          "title": "College Enrollment",
+          "description": "James enrolled at the University of Michigan to pursue a degree in Computer Science."
+        },
+        {
+          "id": "James Schoenthal_2015-05-02_809149",
+          "type": "event",
+          "time": "2015-05-02",
+          "title": "College Graduation",
+          "description": "James graduated from the University of Michigan with a Bachelor's degree in Computer Science, summa cum laude."
+        },
+        {
+          "id": "James Schoenthal_2016-02-10_219428",
+          "type": "event",
+          "time": "2016-02-10",
+          "title": "First Job",
+          "description": "James started his first job as a software engineer at a tech startup in San Francisco."
+        },
+        {
+          "id": "James Schoenthal_2019-11-30_18662",
+          "type": "event",
+          "time": "2019-11-30",
+          "title": "Marriage",
+          "description": "James married his long-time girlfriend, Emily, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "James Schoenthal_2022-07-15_284491",
+          "type": "event",
+          "time": "2022-07-15",
+          "title": "Promotion",
+          "description": "James was promoted to Senior Software Engineer at his company, recognizing his exceptional contributions to several key projects."
+        },
+        {
+          "id": "James Schoenthal_2023-04-20_796593",
+          "type": "event",
+          "time": "2023-04-20",
+          "title": "First Child",
+          "description": "James and Emily welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "Monica Schoenthal_1985-03-12_3024",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Monica Schoenthal was born in a small town in Germany."
+        },
+        {
+          "id": "Monica Schoenthal_1991-09-01_382303",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Monica started her first day of elementary school, marking the beginning of her academic journey."
+        },
+        {
+          "id": "Monica Schoenthal_1998-06-15_648252",
+          "type": "event",
+          "time": "1998-06-15",
+          "title": "Family Vacation",
+          "description": "Monica and her family traveled to Italy for a memorable summer vacation, visiting Rome and Florence."
+        },
+        {
+          "id": "Monica Schoenthal_2003-07-22_129523",
+          "type": "event",
+          "time": "2003-07-22",
+          "title": "High School Graduation",
+          "description": "Monica graduated from high school with honors, celebrated by her family and friends."
+        },
+        {
+          "id": "Monica Schoenthal_2004-10-05_101693",
+          "type": "event",
+          "time": "2004-10-05",
+          "title": "University Enrollment",
+          "description": "Monica began her studies at the University of Munich, majoring in Environmental Science."
+        },
+        {
+          "id": "Monica Schoenthal_2008-03-30_830922",
+          "type": "event",
+          "time": "2008-03-30",
+          "title": "Study Abroad",
+          "description": "Monica spent a semester studying abroad in Sweden, focusing on sustainable development."
+        },
+        {
+          "id": "Monica Schoenthal_2010-12-18_465232",
+          "type": "event",
+          "time": "2010-12-18",
+          "title": "University Graduation",
+          "description": "Monica graduated with a Master's degree in Environmental Science, achieving high academic recognition."
+        },
+        {
+          "id": "Monica Schoenthal_2012-02-14_443895",
+          "type": "event",
+          "time": "2012-02-14",
+          "title": "First Job",
+          "description": "Monica started her first professional job as an environmental consultant at a leading firm in Berlin."
+        },
+        {
+          "id": "Monica Schoenthal_2015-08-25_966216",
+          "type": "event",
+          "time": "2015-08-25",
+          "title": "Marriage",
+          "description": "Monica married her long-time partner, Markus, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Monica Schoenthal_2018-11-10_806818",
+          "type": "event",
+          "time": "2018-11-10",
+          "title": "First Child",
+          "description": "Monica and Markus welcomed their first child, a daughter named Lena, into their family."
+        },
+        {
+          "id": "Maria Schoenthal_1985-03-15_224666",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "Maria Schoenthal was born in a small town in Germany to loving parents."
+        },
+        {
+          "id": "Maria Schoenthal_1991-09-01_996018",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Maria started her first day of elementary school, marking the beginning of her academic journey."
+        },
+        {
+          "id": "Maria Schoenthal_2000-06-20_16520",
+          "type": "event",
+          "time": "2000-06-20",
+          "title": "Family Vacation",
+          "description": "The Schoenthal family went on a memorable vacation to the Alps, where Maria developed a love for hiking."
+        },
+        {
+          "id": "Maria Schoenthal_2003-11-10_165397",
+          "type": "event",
+          "time": "2003-11-10",
+          "title": "School Play",
+          "description": "Maria played the lead role in her school's production of 'The Sound of Music', showcasing her talent for acting and singing."
+        },
+        {
+          "id": "Maria Schoenthal_2007-05-25_709371",
+          "type": "event",
+          "time": "2007-05-25",
+          "title": "High School Graduation",
+          "description": "Maria graduated from high school with honors, receiving several awards for her academic achievements."
+        },
+        {
+          "id": "Maria Schoenthal_2011-09-01_729030",
+          "type": "event",
+          "time": "2011-09-01",
+          "title": "University Enrollment",
+          "description": "Maria began her studies at the University of Munich, majoring in Environmental Science."
+        },
+        {
+          "id": "Maria Schoenthal_2014-03-12_817435",
+          "type": "event",
+          "time": "2014-03-12",
+          "title": "Study Abroad",
+          "description": "Maria embarked on a semester-long study abroad program in Costa Rica, where she conducted field research on rainforest ecosystems."
+        },
+        {
+          "id": "Maria Schoenthal_2016-07-20_893956",
+          "type": "event",
+          "time": "2016-07-20",
+          "title": "First Job",
+          "description": "Maria landed her first job as an environmental consultant at a local firm, applying her knowledge to real-world projects."
+        },
+        {
+          "id": "Maria Schoenthal_2019-12-30_4094",
+          "type": "event",
+          "time": "2019-12-30",
+          "title": "Marriage",
+          "description": "Maria married her long-time partner, Johannes, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Maria Schoenthal_2022-08-15_232205",
+          "type": "event",
+          "time": "2022-08-15",
+          "title": "Publication of Research",
+          "description": "Maria's research on sustainable agriculture was published in a prestigious scientific journal, marking a significant milestone in her career."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Debbie Kluesner",
+        "Beth Kluesner",
+        "Paula Kluesner",
+        "Michael Kluesner",
+        "David Kluesner"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_1985-03-12_644122"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_1991-09-01_1305"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2000-07-15_449145"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2003-06-20_547288"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2007-08-30_950023"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2011-05-10_66884"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2015-11-22_942908"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2018-04-05_645650"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2021-09-15_768431"
+        },
+        {
+          "type": "had_event",
+          "src": "Paula Kluesner",
+          "dst": "Paula Kluesner_2023-06-30_345075"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_1985-03-12_51330"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_1991-09-01_433395"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_1998-06-20_99456"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2003-05-15_359074"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2004-10-22_265030"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2007-03-08_64001"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2009-07-14_642117"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2011-12-20_269656"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2013-09-05_932619"
+        },
+        {
+          "type": "had_event",
+          "src": "Michael Kluesner",
+          "dst": "Michael Kluesner_2018-11-30_692472"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_1975-03-12_570008"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_1981-09-05_657789"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_1993-06-10_90962"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_1997-05-20_490375"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_2000-11-03_145474"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_2005-07-15_75081"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_2008-02-22_478290"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_2012-09-08_525861"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_2015-06-14_71165"
+        },
+        {
+          "type": "had_event",
+          "src": "Debbie Kluesner",
+          "dst": "Debbie Kluesner_2020-03-30_32903"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_1985-03-12_959243"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_1991-09-05_284121"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2001-06-10_557503"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2005-08-20_646073"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2009-05-02_686343"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2012-11-10_444127"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2015-03-25_569319"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2018-07-15_182988"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2021-09-05_925704"
+        },
+        {
+          "type": "had_event",
+          "src": "David Kluesner",
+          "dst": "David Kluesner_2023-06-20_19313"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_1990-03-15_923147"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2005-06-01_360205"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2008-05-20_399363"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2012-08-25_142194"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2014-07-10_183125"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2016-05-04_860543"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2017-02-15_432824"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2019-11-30_972403"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2021-09-12_213205"
+        },
+        {
+          "type": "had_event",
+          "src": "Beth Kluesner",
+          "dst": "Beth Kluesner_2023-04-20_805901"
+        },
+        {
+          "type": "relationship",
+          "src": "Debbie Kluesner",
+          "dst": "Michael Kluesner",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Beth Kluesner",
+          "dst": "David Kluesner",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Paula Kluesner",
+          "dst": "Michael Kluesner",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Michael Kluesner",
+          "dst": "Beth Kluesner",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "David Kluesner",
+          "dst": "Debbie Kluesner",
+          "relationship": "brother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Paula Kluesner_1985-03-12_644122",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Paula Kluesner was born in a small town in Germany."
+        },
+        {
+          "id": "Paula Kluesner_1991-09-01_1305",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Paula started her first day of elementary school, marking the beginning of her academic journey."
+        },
+        {
+          "id": "Paula Kluesner_2000-07-15_449145",
+          "type": "event",
+          "time": "2000-07-15",
+          "title": "Family Vacation",
+          "description": "Paula and her family went on a memorable vacation to Italy, visiting Rome and Florence."
+        },
+        {
+          "id": "Paula Kluesner_2003-06-20_547288",
+          "type": "event",
+          "time": "2003-06-20",
+          "title": "Graduation from Middle School",
+          "description": "Paula graduated from middle school with honors, receiving an award for outstanding academic achievement."
+        },
+        {
+          "id": "Paula Kluesner_2007-08-30_950023",
+          "type": "event",
+          "time": "2007-08-30",
+          "title": "High School Graduation",
+          "description": "Paula graduated from high school and was accepted into a prestigious university to study computer science."
+        },
+        {
+          "id": "Paula Kluesner_2011-05-10_66884",
+          "type": "event",
+          "time": "2011-05-10",
+          "title": "First Job",
+          "description": "Paula landed her first job as a software developer at a tech startup in Berlin."
+        },
+        {
+          "id": "Paula Kluesner_2015-11-22_942908",
+          "type": "event",
+          "time": "2015-11-22",
+          "title": "Marriage",
+          "description": "Paula married her long-time boyfriend, Markus, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Paula Kluesner_2018-04-05_645650",
+          "type": "event",
+          "time": "2018-04-05",
+          "title": "Birth of First Child",
+          "description": "Paula gave birth to her first child, a baby girl named Sophia."
+        },
+        {
+          "id": "Paula Kluesner_2021-09-15_768431",
+          "type": "event",
+          "time": "2021-09-15",
+          "title": "Promotion at Work",
+          "description": "Paula was promoted to Senior Software Engineer at her company, recognizing her hard work and dedication."
+        },
+        {
+          "id": "Paula Kluesner_2023-06-30_345075",
+          "type": "event",
+          "time": "2023-06-30",
+          "title": "Family Reunion",
+          "description": "Paula organized a large family reunion, bringing together relatives from all over the world for a weekend of celebration and connection."
+        },
+        {
+          "id": "Michael Kluesner_1985-03-12_51330",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Michael Kluesner was born in a small town in Germany."
+        },
+        {
+          "id": "Michael Kluesner_1991-09-01_433395",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Michael started his first day of elementary school, marking the beginning of his academic journey."
+        },
+        {
+          "id": "Michael Kluesner_1998-06-20_99456",
+          "type": "event",
+          "time": "1998-06-20",
+          "title": "Family Vacation",
+          "description": "The Kluesner family took a memorable trip to the Alps, where Michael developed a love for hiking."
+        },
+        {
+          "id": "Michael Kluesner_2003-05-15_359074",
+          "type": "event",
+          "time": "2003-05-15",
+          "title": "High School Graduation",
+          "description": "Michael graduated from high school with honors, excelling in mathematics and science."
+        },
+        {
+          "id": "Michael Kluesner_2004-10-22_265030",
+          "type": "event",
+          "time": "2004-10-22",
+          "title": "University Enrollment",
+          "description": "He enrolled in the Technical University of Munich to study computer science."
+        },
+        {
+          "id": "Michael Kluesner_2007-03-08_64001",
+          "type": "event",
+          "time": "2007-03-08",
+          "title": "First Internship",
+          "description": "Michael began his first internship at a local software development company, gaining practical experience."
+        },
+        {
+          "id": "Michael Kluesner_2009-07-14_642117",
+          "type": "event",
+          "time": "2009-07-14",
+          "title": "Study Abroad",
+          "description": "He spent a semester studying abroad in California, USA, broadening his cultural and academic horizons."
+        },
+        {
+          "id": "Michael Kluesner_2011-12-20_269656",
+          "type": "event",
+          "time": "2011-12-20",
+          "title": "Bachelor's Degree",
+          "description": "Michael graduated with a Bachelor's degree in Computer Science, achieving top grades in his class."
+        },
+        {
+          "id": "Michael Kluesner_2013-09-05_932619",
+          "type": "event",
+          "time": "2013-09-05",
+          "title": "First Job",
+          "description": "He started his first full-time job as a software engineer at a tech startup in Berlin."
+        },
+        {
+          "id": "Michael Kluesner_2018-11-30_692472",
+          "type": "event",
+          "time": "2018-11-30",
+          "title": "Marriage",
+          "description": "Michael married his long-time girlfriend, Anna, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Debbie Kluesner_1975-03-12_570008",
+          "type": "event",
+          "time": "1975-03-12",
+          "title": "Birth",
+          "description": "Debbie Kluesner was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Debbie Kluesner_1981-09-05_657789",
+          "type": "event",
+          "time": "1981-09-05",
+          "title": "First Day of School",
+          "description": "Debbie started her first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Debbie Kluesner_1993-06-10_90962",
+          "type": "event",
+          "time": "1993-06-10",
+          "title": "High School Graduation",
+          "description": "Debbie graduated from Oakwood High School with honors and received a scholarship for college."
+        },
+        {
+          "id": "Debbie Kluesner_1997-05-20_490375",
+          "type": "event",
+          "time": "1997-05-20",
+          "title": "College Graduation",
+          "description": "Debbie earned her Bachelor's degree in Psychology from the University of Michigan."
+        },
+        {
+          "id": "Debbie Kluesner_2000-11-03_145474",
+          "type": "event",
+          "time": "2000-11-03",
+          "title": "First Job",
+          "description": "Debbie started her first job as a counselor at a local mental health clinic in Ann Arbor, Michigan."
+        },
+        {
+          "id": "Debbie Kluesner_2005-07-15_75081",
+          "type": "event",
+          "time": "2005-07-15",
+          "title": "Marriage",
+          "description": "Debbie married her long-time boyfriend, Mark, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Debbie Kluesner_2008-02-22_478290",
+          "type": "event",
+          "time": "2008-02-22",
+          "title": "Birth of First Child",
+          "description": "Debbie gave birth to her first child, a daughter named Emily, at St. Joseph's Hospital."
+        },
+        {
+          "id": "Debbie Kluesner_2012-09-08_525861",
+          "type": "event",
+          "time": "2012-09-08",
+          "title": "Promotion",
+          "description": "Debbie was promoted to the position of Senior Counselor at the mental health clinic, recognizing her dedication and expertise."
+        },
+        {
+          "id": "Debbie Kluesner_2015-06-14_71165",
+          "type": "event",
+          "time": "2015-06-14",
+          "title": "Family Vacation",
+          "description": "Debbie and her family took a memorable vacation to Hawaii, exploring the islands and creating lasting memories."
+        },
+        {
+          "id": "Debbie Kluesner_2020-03-30_32903",
+          "type": "event",
+          "time": "2020-03-30",
+          "title": "Community Recognition",
+          "description": "Debbie was awarded the 'Community Service Award' for her outstanding contributions to mental health awareness and support in her local community."
+        },
+        {
+          "id": "David Kluesner_1985-03-12_959243",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "David Kluesner was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "David Kluesner_1991-09-05_284121",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "David started his first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "David Kluesner_2001-06-10_557503",
+          "type": "event",
+          "time": "2001-06-10",
+          "title": "Graduation from Middle School",
+          "description": "David graduated from Maplewood Middle School with honors and was awarded a scholarship for his academic achievements."
+        },
+        {
+          "id": "David Kluesner_2005-08-20_646073",
+          "type": "event",
+          "time": "2005-08-20",
+          "title": "High School Graduation",
+          "description": "David graduated from Maplewood High School as valedictorian and received a full scholarship to the University of Michigan."
+        },
+        {
+          "id": "David Kluesner_2009-05-02_686343",
+          "type": "event",
+          "time": "2009-05-02",
+          "title": "College Graduation",
+          "description": "David graduated from the University of Michigan with a Bachelor's degree in Computer Science and was hired by Google as a software engineer."
+        },
+        {
+          "id": "David Kluesner_2012-11-10_444127",
+          "type": "event",
+          "time": "2012-11-10",
+          "title": "Marriage",
+          "description": "David married his long-time girlfriend, Sarah, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "David Kluesner_2015-03-25_569319",
+          "type": "event",
+          "time": "2015-03-25",
+          "title": "Birth of First Child",
+          "description": "David and Sarah welcomed their first child, a baby girl named Emily, into the world."
+        },
+        {
+          "id": "David Kluesner_2018-07-15_182988",
+          "type": "event",
+          "time": "2018-07-15",
+          "title": "Promotion at Work",
+          "description": "David was promoted to Senior Software Engineer at Google and received a significant salary increase."
+        },
+        {
+          "id": "David Kluesner_2021-09-05_925704",
+          "type": "event",
+          "time": "2021-09-05",
+          "title": "Purchase of First Home",
+          "description": "David and Sarah purchased their first home, a beautiful 4-bedroom house in the suburbs of Seattle, Washington."
+        },
+        {
+          "id": "David Kluesner_2023-06-20_19313",
+          "type": "event",
+          "time": "2023-06-20",
+          "title": "10-Year Work Anniversary",
+          "description": "David celebrated his 10-year work anniversary at Google and was recognized for his outstanding contributions to the company."
+        },
+        {
+          "id": "Beth Kluesner_1990-03-15_923147",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Beth Kluesner was born in a small town in Minnesota, USA."
+        },
+        {
+          "id": "Beth Kluesner_2005-06-01_360205",
+          "type": "event",
+          "time": "2005-06-01",
+          "title": "Graduated Middle School",
+          "description": "Beth graduated from her local middle school with honors and was recognized for her academic achievements."
+        },
+        {
+          "id": "Beth Kluesner_2008-05-20_399363",
+          "type": "event",
+          "time": "2008-05-20",
+          "title": "High School Talent Show Winner",
+          "description": "Beth won the high school talent show with her impressive piano performance, showcasing her musical talent."
+        },
+        {
+          "id": "Beth Kluesner_2012-08-25_142194",
+          "type": "event",
+          "time": "2012-08-25",
+          "title": "Started College",
+          "description": "Beth began her undergraduate studies at the University of Minnesota, majoring in Computer Science."
+        },
+        {
+          "id": "Beth Kluesner_2014-07-10_183125",
+          "type": "event",
+          "time": "2014-07-10",
+          "title": "Summer Internship",
+          "description": "Beth secured a summer internship at a local tech startup, gaining valuable experience in software development."
+        },
+        {
+          "id": "Beth Kluesner_2016-05-04_860543",
+          "type": "event",
+          "time": "2016-05-04",
+          "title": "Graduated College",
+          "description": "Beth graduated with a Bachelor's degree in Computer Science, receiving the Outstanding Senior Award."
+        },
+        {
+          "id": "Beth Kluesner_2017-02-15_432824",
+          "type": "event",
+          "time": "2017-02-15",
+          "title": "First Job",
+          "description": "Beth started her first full-time job as a software engineer at a renowned tech company in California."
+        },
+        {
+          "id": "Beth Kluesner_2019-11-30_972403",
+          "type": "event",
+          "time": "2019-11-30",
+          "title": "Promotion",
+          "description": "Beth was promoted to Senior Software Engineer, recognizing her contributions to several successful projects."
+        },
+        {
+          "id": "Beth Kluesner_2021-09-12_213205",
+          "type": "event",
+          "time": "2021-09-12",
+          "title": "Marriage",
+          "description": "Beth married her long-time partner, John, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Beth Kluesner_2023-04-20_805901",
+          "type": "event",
+          "time": "2023-04-20",
+          "title": "First Child",
+          "description": "Beth and John welcomed their first child, a baby girl named Emma, into their family."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Mark Swirsky",
+        "Marvin Swirsky",
+        "Marie Swirsky",
+        "James Swirsky",
+        "William Swirsky"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1965-03-12_289682"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1971-09-01_129591"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1983-06-15_35637"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1987-09-01_386150"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1991-05-30_335072"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1995-02-14_934211"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_1998-07-20_497875"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_2005-11-10_800353"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_2012-03-05_120882"
+        },
+        {
+          "type": "had_event",
+          "src": "Mark Swirsky",
+          "dst": "Mark Swirsky_2020-12-25_318963"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_1985-03-12_894340"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_1991-09-05_728424"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2003-06-15_200409"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2007-05-20_247850"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2011-08-25_542519"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2015-05-02_763870"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2016-02-10_627453"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2019-11-30_646375"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2022-07-18_69047"
+        },
+        {
+          "type": "had_event",
+          "src": "James Swirsky",
+          "dst": "James Swirsky_2023-04-05_512315"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_1985-03-12_193173"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_1991-09-05_398858"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2003-06-15_206003"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2007-08-20_969074"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2011-09-01_432441"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2015-05-22_124276"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2016-02-15_350105"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2019-11-10_446757"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2022-03-05_449872"
+        },
+        {
+          "type": "had_event",
+          "src": "William Swirsky",
+          "dst": "William Swirsky_2023-07-20_18944"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1955-03-12_838907"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1973-06-15_870325"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1977-05-20_788535"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1980-09-03_572668"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1985-11-10_688412"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1988-07-22_261764"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1992-04-15_224393"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_1999-02-28_698858"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_2005-08-09_431204"
+        },
+        {
+          "type": "had_event",
+          "src": "Marvin Swirsky",
+          "dst": "Marvin Swirsky_2018-12-25_344238"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_1985-03-12_985073"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_1991-09-05_900072"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2001-06-15_92018"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2005-08-20_114544"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2009-05-30_187230"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2012-11-10_345850"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2015-02-28_838569"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2018-07-15_601011"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2021-09-05_575926"
+        },
+        {
+          "type": "had_event",
+          "src": "Marie Swirsky",
+          "dst": "Marie Swirsky_2023-03-12_877805"
+        },
+        {
+          "type": "relationship",
+          "src": "Mark Swirsky",
+          "dst": "Marie Swirsky",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Marvin Swirsky",
+          "dst": "James Swirsky",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Marie Swirsky",
+          "dst": "William Swirsky",
+          "relationship": "mother"
+        },
+        {
+          "type": "relationship",
+          "src": "James Swirsky",
+          "dst": "Marie Swirsky",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "William Swirsky",
+          "dst": "Mark Swirsky",
+          "relationship": "brother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Mark Swirsky_1965-03-12_289682",
+          "type": "event",
+          "time": "1965-03-12",
+          "title": "Birth",
+          "description": "Mark Swirsky was born in New York City, USA."
+        },
+        {
+          "id": "Mark Swirsky_1971-09-01_129591",
+          "type": "event",
+          "time": "1971-09-01",
+          "title": "First Day of School",
+          "description": "Mark started his first day of kindergarten at PS 199 in Manhattan."
+        },
+        {
+          "id": "Mark Swirsky_1983-06-15_35637",
+          "type": "event",
+          "time": "1983-06-15",
+          "title": "High School Graduation",
+          "description": "Mark graduated from Stuyvesant High School with honors."
+        },
+        {
+          "id": "Mark Swirsky_1987-09-01_386150",
+          "type": "event",
+          "time": "1987-09-01",
+          "title": "College Enrollment",
+          "description": "Mark began his undergraduate studies at Harvard University, majoring in Computer Science."
+        },
+        {
+          "id": "Mark Swirsky_1991-05-30_335072",
+          "type": "event",
+          "time": "1991-05-30",
+          "title": "College Graduation",
+          "description": "Mark graduated from Harvard University with a Bachelor's degree in Computer Science."
+        },
+        {
+          "id": "Mark Swirsky_1995-02-14_934211",
+          "type": "event",
+          "time": "1995-02-14",
+          "title": "Marriage",
+          "description": "Mark married his long-time girlfriend, Sarah, in a small ceremony in Central Park."
+        },
+        {
+          "id": "Mark Swirsky_1998-07-20_497875",
+          "type": "event",
+          "time": "1998-07-20",
+          "title": "First Child Born",
+          "description": "Mark and Sarah welcomed their first child, a daughter named Emily."
+        },
+        {
+          "id": "Mark Swirsky_2005-11-10_800353",
+          "type": "event",
+          "time": "2005-11-10",
+          "title": "Promotion",
+          "description": "Mark was promoted to Chief Technology Officer (CTO) at a leading tech company in Silicon Valley."
+        },
+        {
+          "id": "Mark Swirsky_2012-03-05_120882",
+          "type": "event",
+          "time": "2012-03-05",
+          "title": "Patent Granted",
+          "description": "Mark was granted a patent for his innovative work in artificial intelligence and machine learning."
+        },
+        {
+          "id": "Mark Swirsky_2020-12-25_318963",
+          "type": "event",
+          "time": "2020-12-25",
+          "title": "Retirement",
+          "description": "Mark retired from his position as CTO to focus on personal projects and spending time with his family."
+        },
+        {
+          "id": "James Swirsky_1985-03-12_894340",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "James Swirsky was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "James Swirsky_1991-09-05_728424",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "James started his first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "James Swirsky_2003-06-15_200409",
+          "type": "event",
+          "time": "2003-06-15",
+          "title": "Graduation from Middle School",
+          "description": "James graduated from Maplewood Middle School with honors and was awarded the 'Student of the Year' title."
+        },
+        {
+          "id": "James Swirsky_2007-05-20_247850",
+          "type": "event",
+          "time": "2007-05-20",
+          "title": "High School Graduation",
+          "description": "James graduated from Maplewood High School as the valedictorian of his class."
+        },
+        {
+          "id": "James Swirsky_2011-08-25_542519",
+          "type": "event",
+          "time": "2011-08-25",
+          "title": "College Enrollment",
+          "description": "James enrolled at the University of Michigan to pursue a degree in Computer Science."
+        },
+        {
+          "id": "James Swirsky_2015-05-02_763870",
+          "type": "event",
+          "time": "2015-05-02",
+          "title": "College Graduation",
+          "description": "James graduated from the University of Michigan with a Bachelor's degree in Computer Science, summa cum laude."
+        },
+        {
+          "id": "James Swirsky_2016-02-10_627453",
+          "type": "event",
+          "time": "2016-02-10",
+          "title": "First Job",
+          "description": "James started his first job as a software engineer at a tech startup in San Francisco."
+        },
+        {
+          "id": "James Swirsky_2019-11-30_646375",
+          "type": "event",
+          "time": "2019-11-30",
+          "title": "Marriage",
+          "description": "James married his long-time girlfriend, Emily, in a beautiful ceremony in Napa Valley."
+        },
+        {
+          "id": "James Swirsky_2022-07-18_69047",
+          "type": "event",
+          "time": "2022-07-18",
+          "title": "Promotion",
+          "description": "James was promoted to Senior Software Engineer at his company, recognizing his exceptional contributions to several key projects."
+        },
+        {
+          "id": "James Swirsky_2023-04-05_512315",
+          "type": "event",
+          "time": "2023-04-05",
+          "title": "First Child",
+          "description": "James and Emily welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "William Swirsky_1985-03-12_193173",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "William Swirsky was born in New York City, USA."
+        },
+        {
+          "id": "William Swirsky_1991-09-05_398858",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "William started his first day of kindergarten at PS 110, a local public school in Manhattan."
+        },
+        {
+          "id": "William Swirsky_2003-06-15_206003",
+          "type": "event",
+          "time": "2003-06-15",
+          "title": "Graduation from Middle School",
+          "description": "William graduated from MS 54, a middle school known for its strong academic program, with honors."
+        },
+        {
+          "id": "William Swirsky_2007-08-20_969074",
+          "type": "event",
+          "time": "2007-08-20",
+          "title": "High School Graduation",
+          "description": "William graduated from Stuyvesant High School, a prestigious specialized high school in New York City, with a focus on science and mathematics."
+        },
+        {
+          "id": "William Swirsky_2011-09-01_432441",
+          "type": "event",
+          "time": "2011-09-01",
+          "title": "College Enrollment",
+          "description": "William enrolled at the Massachusetts Institute of Technology (MIT) to pursue a degree in Computer Science and Engineering."
+        },
+        {
+          "id": "William Swirsky_2015-05-22_124276",
+          "type": "event",
+          "time": "2015-05-22",
+          "title": "College Graduation",
+          "description": "William graduated from MIT with a Bachelor's degree in Computer Science and Engineering, receiving several academic awards."
+        },
+        {
+          "id": "William Swirsky_2016-02-15_350105",
+          "type": "event",
+          "time": "2016-02-15",
+          "title": "First Job",
+          "description": "William started his first full-time job as a software engineer at Google's New York City office, working on machine learning projects."
+        },
+        {
+          "id": "William Swirsky_2019-11-10_446757",
+          "type": "event",
+          "time": "2019-11-10",
+          "title": "Marriage",
+          "description": "William married his long-time girlfriend, Emily Chen, in a beautiful ceremony held at the New York Botanical Garden."
+        },
+        {
+          "id": "William Swirsky_2022-03-05_449872",
+          "type": "event",
+          "time": "2022-03-05",
+          "title": "Promotion",
+          "description": "William was promoted to Senior Software Engineer at Google, recognizing his significant contributions to the company's AI research and development."
+        },
+        {
+          "id": "William Swirsky_2023-07-20_18944",
+          "type": "event",
+          "time": "2023-07-20",
+          "title": "First Child",
+          "description": "William and Emily welcomed their first child, a daughter named Sophia Swirsky, into the world at Lenox Hill Hospital in Manhattan."
+        },
+        {
+          "id": "Marvin Swirsky_1955-03-12_838907",
+          "type": "event",
+          "time": "1955-03-12",
+          "title": "Birth",
+          "description": "Marvin Swirsky was born in New York City, USA."
+        },
+        {
+          "id": "Marvin Swirsky_1973-06-15_870325",
+          "type": "event",
+          "time": "1973-06-15",
+          "title": "High School Graduation",
+          "description": "Marvin graduated from Stuyvesant High School with honors, excelling in mathematics and science."
+        },
+        {
+          "id": "Marvin Swirsky_1977-05-20_788535",
+          "type": "event",
+          "time": "1977-05-20",
+          "title": "College Graduation",
+          "description": "Marvin earned a Bachelor's degree in Computer Science from MIT, where he was a member of the robotics club."
+        },
+        {
+          "id": "Marvin Swirsky_1980-09-03_572668",
+          "type": "event",
+          "time": "1980-09-03",
+          "title": "First Job",
+          "description": "Marvin started his first job as a software engineer at IBM, working on mainframe systems."
+        },
+        {
+          "id": "Marvin Swirsky_1985-11-10_688412",
+          "type": "event",
+          "time": "1985-11-10",
+          "title": "Marriage",
+          "description": "Marvin married his college sweetheart, Laura, in a small ceremony in Boston."
+        },
+        {
+          "id": "Marvin Swirsky_1988-07-22_261764",
+          "type": "event",
+          "time": "1988-07-22",
+          "title": "First Child",
+          "description": "Marvin and Laura welcomed their first child, a daughter named Emily."
+        },
+        {
+          "id": "Marvin Swirsky_1992-04-15_224393",
+          "type": "event",
+          "time": "1992-04-15",
+          "title": "Promotion",
+          "description": "Marvin was promoted to Senior Software Architect at IBM, leading a team of developers."
+        },
+        {
+          "id": "Marvin Swirsky_1999-02-28_698858",
+          "type": "event",
+          "time": "1999-02-28",
+          "title": "Patent Granted",
+          "description": "Marvin was granted a patent for a novel data compression algorithm he developed."
+        },
+        {
+          "id": "Marvin Swirsky_2005-08-09_431204",
+          "type": "event",
+          "time": "2005-08-09",
+          "title": "Retirement",
+          "description": "Marvin retired from IBM after 25 years of service, planning to pursue consulting and travel."
+        },
+        {
+          "id": "Marvin Swirsky_2018-12-25_344238",
+          "type": "event",
+          "time": "2018-12-25",
+          "title": "Grandparenthood",
+          "description": "Marvin became a grandfather when his daughter Emily gave birth to a baby boy named Noah."
+        },
+        {
+          "id": "Marie Swirsky_1985-03-12_985073",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Marie Swirsky was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Marie Swirsky_1991-09-05_900072",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "Marie started her first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Marie Swirsky_2001-06-15_92018",
+          "type": "event",
+          "time": "2001-06-15",
+          "title": "Graduation from Middle School",
+          "description": "Marie graduated from Maplewood Middle School with honors and was awarded a scholarship for her academic achievements."
+        },
+        {
+          "id": "Marie Swirsky_2005-08-20_114544",
+          "type": "event",
+          "time": "2005-08-20",
+          "title": "High School Graduation",
+          "description": "Marie graduated from Maplewood High School as valedictorian and received a full scholarship to the University of Michigan."
+        },
+        {
+          "id": "Marie Swirsky_2009-05-30_187230",
+          "type": "event",
+          "time": "2009-05-30",
+          "title": "College Graduation",
+          "description": "Marie graduated from the University of Michigan with a Bachelor's degree in Computer Science and was hired by Google as a software engineer."
+        },
+        {
+          "id": "Marie Swirsky_2012-11-10_345850",
+          "type": "event",
+          "time": "2012-11-10",
+          "title": "Marriage",
+          "description": "Marie married her long-time boyfriend, David, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Marie Swirsky_2015-02-28_838569",
+          "type": "event",
+          "time": "2015-02-28",
+          "title": "First Child",
+          "description": "Marie gave birth to her first child, a daughter named Sophia."
+        },
+        {
+          "id": "Marie Swirsky_2018-07-15_601011",
+          "type": "event",
+          "time": "2018-07-15",
+          "title": "Promotion",
+          "description": "Marie was promoted to Senior Software Engineer at Google and led a team of developers to launch a new product."
+        },
+        {
+          "id": "Marie Swirsky_2021-09-05_575926",
+          "type": "event",
+          "time": "2021-09-05",
+          "title": "Second Child",
+          "description": "Marie gave birth to her second child, a son named Oliver."
+        },
+        {
+          "id": "Marie Swirsky_2023-03-12_877805",
+          "type": "event",
+          "time": "2023-03-12",
+          "title": "40th Birthday Celebration",
+          "description": "Marie celebrated her 40th birthday with a surprise party organized by her husband, David, and attended by close friends and family."
+        }
+      ]
+    },
+    {
+      "members": [
+        "John Aube",
+        "Nicole Aube",
+        "Samuel Aube",
+        "Zelma Aube",
+        "Robert Aube"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_1985-03-15_810678"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_1991-09-01_979983"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2000-06-20_333069"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2003-11-10_64586"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2007-05-25_559626"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2011-09-05_343256"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2015-07-12_58398"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2017-03-30_29686"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2020-12-25_724722"
+        },
+        {
+          "type": "had_event",
+          "src": "Robert Aube",
+          "dst": "Robert Aube_2023-08-10_812015"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_1985-03-15_503253"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_1991-09-01_663190"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2003-06-10_19594"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2007-08-20_11553"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2011-05-30_502624"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2015-12-15_192651"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2017-07-22_261571"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2019-02-14_630353"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2021-11-10_561875"
+        },
+        {
+          "type": "had_event",
+          "src": "John Aube",
+          "dst": "John Aube_2023-04-25_85409"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_1990-03-15_487591"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2006-06-20_101142"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2010-09-01_515508"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2012-07-10_822895"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2014-06-30_610677"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2015-09-15_876572"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2018-11-20_792884"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2020-05-05_695789"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2022-08-30_354983"
+        },
+        {
+          "type": "had_event",
+          "src": "Zelma Aube",
+          "dst": "Zelma Aube_2023-12-25_133020"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_1990-03-15_180468"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2002-06-20_522683"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2006-09-05_755471"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2010-07-12_727275"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2014-09-01_303237"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2016-03-25_870594"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2018-06-30_869326"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2019-02-10_795050"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2021-11-05_305198"
+        },
+        {
+          "type": "had_event",
+          "src": "Samuel Aube",
+          "dst": "Samuel Aube_2023-08-18_916214"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_1990-03-15_972795"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2006-06-20_417513"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2010-09-01_777688"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2012-05-10_889081"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2014-06-30_273700"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2015-02-15_695736"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2018-11-20_746747"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2020-03-05_647989"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2022-08-12_25713"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Aube",
+          "dst": "Nicole Aube_2023-12-31_6681"
+        },
+        {
+          "type": "relationship",
+          "src": "John Aube",
+          "dst": "Zelma Aube",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Nicole Aube",
+          "dst": "John Aube",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Samuel Aube",
+          "dst": "Zelma Aube",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Zelma Aube",
+          "dst": "Samuel Aube",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Robert Aube",
+          "dst": "John Aube",
+          "relationship": "brother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Robert Aube_1985-03-15_810678",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "Robert Aube was born in a small town in France to loving parents."
+        },
+        {
+          "id": "Robert Aube_1991-09-01_979983",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Robert started his first day of elementary school, marking the beginning of his academic journey."
+        },
+        {
+          "id": "Robert Aube_2000-06-20_333069",
+          "type": "event",
+          "time": "2000-06-20",
+          "title": "Family Vacation",
+          "description": "The Aube family took a memorable trip to the French Riviera, creating lasting memories."
+        },
+        {
+          "id": "Robert Aube_2003-11-10_64586",
+          "type": "event",
+          "time": "2003-11-10",
+          "title": "First Job",
+          "description": "Robert got his first part-time job at a local bakery, learning the value of hard work."
+        },
+        {
+          "id": "Robert Aube_2007-05-25_559626",
+          "type": "event",
+          "time": "2007-05-25",
+          "title": "High School Graduation",
+          "description": "Robert graduated from high school with honors, celebrated by family and friends."
+        },
+        {
+          "id": "Robert Aube_2011-09-05_343256",
+          "type": "event",
+          "time": "2011-09-05",
+          "title": "University Enrollment",
+          "description": "Robert began his studies at the University of Paris, majoring in Computer Science."
+        },
+        {
+          "id": "Robert Aube_2015-07-12_58398",
+          "type": "event",
+          "time": "2015-07-12",
+          "title": "Study Abroad",
+          "description": "Robert spent a semester studying abroad in Tokyo, Japan, broadening his cultural horizons."
+        },
+        {
+          "id": "Robert Aube_2017-03-30_29686",
+          "type": "event",
+          "time": "2017-03-30",
+          "title": "First Professional Job",
+          "description": "Robert landed his first full-time job as a software developer at a tech startup in Paris."
+        },
+        {
+          "id": "Robert Aube_2020-12-25_724722",
+          "type": "event",
+          "time": "2020-12-25",
+          "title": "Marriage",
+          "description": "Robert married his long-time girlfriend, Sophie, in a beautiful ceremony surrounded by loved ones."
+        },
+        {
+          "id": "Robert Aube_2023-08-10_812015",
+          "type": "event",
+          "time": "2023-08-10",
+          "title": "Home Purchase",
+          "description": "Robert and Sophie bought their first home together in a charming neighborhood in Paris."
+        },
+        {
+          "id": "John Aube_1985-03-15_503253",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "John Aube was born in a small town in Maine, USA."
+        },
+        {
+          "id": "John Aube_1991-09-01_663190",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "John started his first day of kindergarten at the local elementary school."
+        },
+        {
+          "id": "John Aube_2003-06-10_19594",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation",
+          "description": "John graduated from middle school with honors and was awarded a scholarship for his academic achievements."
+        },
+        {
+          "id": "John Aube_2007-08-20_11553",
+          "type": "event",
+          "time": "2007-08-20",
+          "title": "First Job",
+          "description": "John got his first part-time job at a local bookstore, where he developed a love for literature."
+        },
+        {
+          "id": "John Aube_2011-05-30_502624",
+          "type": "event",
+          "time": "2011-05-30",
+          "title": "High School Graduation",
+          "description": "John graduated from high school as valedictorian and received a full scholarship to a prestigious university."
+        },
+        {
+          "id": "John Aube_2015-12-15_192651",
+          "type": "event",
+          "time": "2015-12-15",
+          "title": "College Graduation",
+          "description": "John graduated from university with a degree in Computer Science and was offered a job at a leading tech company."
+        },
+        {
+          "id": "John Aube_2017-07-22_261571",
+          "type": "event",
+          "time": "2017-07-22",
+          "title": "First Major Project",
+          "description": "John successfully led his first major project at work, which resulted in a significant increase in company revenue."
+        },
+        {
+          "id": "John Aube_2019-02-14_630353",
+          "type": "event",
+          "time": "2019-02-14",
+          "title": "Marriage",
+          "description": "John married his long-time girlfriend, Emily, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "John Aube_2021-11-10_561875",
+          "type": "event",
+          "time": "2021-11-10",
+          "title": "Promotion",
+          "description": "John was promoted to a senior management position at his company, recognizing his hard work and dedication."
+        },
+        {
+          "id": "John Aube_2023-04-25_85409",
+          "type": "event",
+          "time": "2023-04-25",
+          "title": "First Child",
+          "description": "John and Emily welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "Zelma Aube_1990-03-15_487591",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Zelma Aube was born in a small town in France to loving parents."
+        },
+        {
+          "id": "Zelma Aube_2006-06-20_101142",
+          "type": "event",
+          "time": "2006-06-20",
+          "title": "High School Graduation",
+          "description": "Zelma graduated from Lyc\u00e9e International with honors, excelling in literature and languages."
+        },
+        {
+          "id": "Zelma Aube_2010-09-01_515508",
+          "type": "event",
+          "time": "2010-09-01",
+          "title": "University Enrollment",
+          "description": "She began her studies in Comparative Literature at the Sorbonne University in Paris."
+        },
+        {
+          "id": "Zelma Aube_2012-07-10_822895",
+          "type": "event",
+          "time": "2012-07-10",
+          "title": "Study Abroad",
+          "description": "Zelma spent a semester studying abroad at the University of Oxford, immersing herself in English literature."
+        },
+        {
+          "id": "Zelma Aube_2014-06-30_610677",
+          "type": "event",
+          "time": "2014-06-30",
+          "title": "Bachelor's Degree",
+          "description": "She graduated with a Bachelor's degree in Comparative Literature, receiving the highest distinction."
+        },
+        {
+          "id": "Zelma Aube_2015-09-15_876572",
+          "type": "event",
+          "time": "2015-09-15",
+          "title": "First Job",
+          "description": "Zelma started her career as a junior editor at a renowned publishing house in Paris."
+        },
+        {
+          "id": "Zelma Aube_2018-11-20_792884",
+          "type": "event",
+          "time": "2018-11-20",
+          "title": "Promotion",
+          "description": "Due to her exceptional work, she was promoted to senior editor, overseeing a team of editors."
+        },
+        {
+          "id": "Zelma Aube_2020-05-05_695789",
+          "type": "event",
+          "time": "2020-05-05",
+          "title": "Book Publication",
+          "description": "Zelma's first book, a collection of short stories, was published to critical acclaim."
+        },
+        {
+          "id": "Zelma Aube_2022-08-30_354983",
+          "type": "event",
+          "time": "2022-08-30",
+          "title": "Award Recognition",
+          "description": "She received the Young Author Award at the Paris Book Fair for her outstanding contribution to literature."
+        },
+        {
+          "id": "Zelma Aube_2023-12-25_133020",
+          "type": "event",
+          "time": "2023-12-25",
+          "title": "Marriage",
+          "description": "Zelma married her long-time partner in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Samuel Aube_1990-03-15_180468",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Samuel Aube was born in a small town in Quebec, Canada, to loving parents who were excited to welcome their first child."
+        },
+        {
+          "id": "Samuel Aube_2002-06-20_522683",
+          "type": "event",
+          "time": "2002-06-20",
+          "title": "First Soccer Tournament",
+          "description": "Samuel participated in his first regional soccer tournament, showcasing his talent and passion for the sport, which would become a significant part of his life."
+        },
+        {
+          "id": "Samuel Aube_2006-09-05_755471",
+          "type": "event",
+          "time": "2006-09-05",
+          "title": "Started High School",
+          "description": "Samuel began his high school journey at Coll\u00e8ge Saint-Alexandre, where he excelled academically and continued to pursue his love for soccer."
+        },
+        {
+          "id": "Samuel Aube_2010-07-12_727275",
+          "type": "event",
+          "time": "2010-07-12",
+          "title": "Graduated High School",
+          "description": "Samuel graduated with honors from Coll\u00e8ge Saint-Alexandre, celebrated by his family and friends, marking the end of an important chapter in his life."
+        },
+        {
+          "id": "Samuel Aube_2014-09-01_303237",
+          "type": "event",
+          "time": "2014-09-01",
+          "title": "Started University",
+          "description": "Samuel enrolled in McGill University to study Computer Science, a field he had grown increasingly passionate about during his high school years."
+        },
+        {
+          "id": "Samuel Aube_2016-03-25_870594",
+          "type": "event",
+          "time": "2016-03-25",
+          "title": "First Internship",
+          "description": "Samuel secured his first internship at a tech startup in Montreal, where he gained valuable experience in software development and teamwork."
+        },
+        {
+          "id": "Samuel Aube_2018-06-30_869326",
+          "type": "event",
+          "time": "2018-06-30",
+          "title": "Graduated University",
+          "description": "Samuel graduated from McGill University with a Bachelor's degree in Computer Science, ready to embark on his professional career in the tech industry."
+        },
+        {
+          "id": "Samuel Aube_2019-02-10_795050",
+          "type": "event",
+          "time": "2019-02-10",
+          "title": "First Job",
+          "description": "Samuel started his first full-time job as a software developer at a leading tech company in Toronto, marking the beginning of his professional journey."
+        },
+        {
+          "id": "Samuel Aube_2021-11-05_305198",
+          "type": "event",
+          "time": "2021-11-05",
+          "title": "Promotion",
+          "description": "Samuel was promoted to Senior Software Developer at his company, recognizing his hard work, dedication, and contributions to various projects."
+        },
+        {
+          "id": "Samuel Aube_2023-08-18_916214",
+          "type": "event",
+          "time": "2023-08-18",
+          "title": "Marriage",
+          "description": "Samuel married his long-time girlfriend, Emily, in a beautiful ceremony surrounded by family and friends, celebrating the start of a new chapter in their lives together."
+        },
+        {
+          "id": "Nicole Aube_1990-03-15_972795",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Nicole Aube was born in a small town in Quebec, Canada, to loving parents."
+        },
+        {
+          "id": "Nicole Aube_2006-06-20_417513",
+          "type": "event",
+          "time": "2006-06-20",
+          "title": "High School Graduation",
+          "description": "Nicole graduated from her local high school with honors, excelling in science and mathematics."
+        },
+        {
+          "id": "Nicole Aube_2010-09-01_777688",
+          "type": "event",
+          "time": "2010-09-01",
+          "title": "University Enrollment",
+          "description": "She began her studies in Computer Science at the University of Waterloo, known for its prestigious tech programs."
+        },
+        {
+          "id": "Nicole Aube_2012-05-10_889081",
+          "type": "event",
+          "time": "2012-05-10",
+          "title": "First Internship",
+          "description": "Nicole secured her first internship at a local tech startup, working on web development and gaining valuable industry experience."
+        },
+        {
+          "id": "Nicole Aube_2014-06-30_273700",
+          "type": "event",
+          "time": "2014-06-30",
+          "title": "Bachelor's Degree",
+          "description": "She graduated with a Bachelor's degree in Computer Science, achieving a high GPA and earning recognition for her academic achievements."
+        },
+        {
+          "id": "Nicole Aube_2015-02-15_695736",
+          "type": "event",
+          "time": "2015-02-15",
+          "title": "First Job",
+          "description": "Nicole started her first full-time job as a software engineer at a renowned tech company in Toronto, working on innovative projects."
+        },
+        {
+          "id": "Nicole Aube_2018-11-20_746747",
+          "type": "event",
+          "time": "2018-11-20",
+          "title": "Promotion",
+          "description": "Due to her exceptional performance, Nicole was promoted to a senior software engineer position, leading a team of developers."
+        },
+        {
+          "id": "Nicole Aube_2020-03-05_647989",
+          "type": "event",
+          "time": "2020-03-05",
+          "title": "Marriage",
+          "description": "She married her long-time partner, celebrating with family and friends in a beautiful ceremony in Montreal."
+        },
+        {
+          "id": "Nicole Aube_2022-08-12_25713",
+          "type": "event",
+          "time": "2022-08-12",
+          "title": "Entrepreneurial Venture",
+          "description": "Nicole co-founded a tech startup focused on sustainable energy solutions, combining her passion for technology and environmental conservation."
+        },
+        {
+          "id": "Nicole Aube_2023-12-31_6681",
+          "type": "event",
+          "time": "2023-12-31",
+          "title": "New Year's Eve Celebration",
+          "description": "Nicole and her husband welcomed the new year with a cozy celebration at home, reflecting on their achievements and setting goals for the future."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Delores Watts",
+        "Frank Watts",
+        "Kathy Watts"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_1985-03-12_717399"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_1991-09-05_107571"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2003-06-10_798543"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2007-08-20_312871"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2011-05-02_190115"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2012-02-15_323603"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2015-11-30_382739"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2018-07-25_224972"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2021-04-10_284944"
+        },
+        {
+          "type": "had_event",
+          "src": "Kathy Watts",
+          "dst": "Kathy Watts_2023-09-15_682708"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1955-03-12_102365"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1973-06-15_122231"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1977-09-02_723918"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1981-05-20_935166"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1983-11-10_422530"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1988-07-25_202107"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1992-04-03_19813"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_1995-09-18_487215"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_2001-06-22_565120"
+        },
+        {
+          "type": "had_event",
+          "src": "Delores Watts",
+          "dst": "Delores Watts_2019-12-31_130686"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_1985-03-15_650547"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_1991-09-01_220012"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2003-06-10_778510"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2007-05-20_453583"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2011-08-25_391254"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2015-02-14_547057"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2017-09-05_482979"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2020-03-01_715695"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2022-11-25_718406"
+        },
+        {
+          "type": "had_event",
+          "src": "Frank Watts",
+          "dst": "Frank Watts_2023-06-30_313128"
+        },
+        {
+          "type": "relationship",
+          "src": "Delores Watts",
+          "dst": "Frank Watts",
+          "relationship": "mother"
+        },
+        {
+          "type": "relationship",
+          "src": "Frank Watts",
+          "dst": "Delores Watts",
+          "relationship": "father"
+        },
+        {
+          "type": "relationship",
+          "src": "Kathy Watts",
+          "dst": "Frank Watts",
+          "relationship": "sister"
+        }
+      ],
+      "events": [
+        {
+          "id": "Kathy Watts_1985-03-12_717399",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Kathy Watts was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Kathy Watts_1991-09-05_107571",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "Kathy started her first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Kathy Watts_2003-06-10_798543",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation",
+          "description": "Kathy graduated from Maplewood High School with honors."
+        },
+        {
+          "id": "Kathy Watts_2007-08-20_312871",
+          "type": "event",
+          "time": "2007-08-20",
+          "title": "College Enrollment",
+          "description": "Kathy began her undergraduate studies at the University of Michigan, majoring in Computer Science."
+        },
+        {
+          "id": "Kathy Watts_2011-05-02_190115",
+          "type": "event",
+          "time": "2011-05-02",
+          "title": "College Graduation",
+          "description": "Kathy graduated from the University of Michigan with a Bachelor's degree in Computer Science."
+        },
+        {
+          "id": "Kathy Watts_2012-02-15_323603",
+          "type": "event",
+          "time": "2012-02-15",
+          "title": "First Job",
+          "description": "Kathy started her first job as a software developer at TechInnovate Solutions in San Francisco."
+        },
+        {
+          "id": "Kathy Watts_2015-11-30_382739",
+          "type": "event",
+          "time": "2015-11-30",
+          "title": "Promotion",
+          "description": "Kathy was promoted to Senior Software Developer at TechInnovate Solutions."
+        },
+        {
+          "id": "Kathy Watts_2018-07-25_224972",
+          "type": "event",
+          "time": "2018-07-25",
+          "title": "Marriage",
+          "description": "Kathy married her long-time boyfriend, Mark, in a beautiful ceremony in Napa Valley."
+        },
+        {
+          "id": "Kathy Watts_2021-04-10_284944",
+          "type": "event",
+          "time": "2021-04-10",
+          "title": "First Child",
+          "description": "Kathy and Mark welcomed their first child, a daughter named Emily."
+        },
+        {
+          "id": "Kathy Watts_2023-09-15_682708",
+          "type": "event",
+          "time": "2023-09-15",
+          "title": "Career Change",
+          "description": "Kathy left TechInnovate Solutions to start her own tech consulting firm, Watts Tech Solutions."
+        },
+        {
+          "id": "Delores Watts_1955-03-12_102365",
+          "type": "event",
+          "time": "1955-03-12",
+          "title": "Birth",
+          "description": "Delores Watts was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Delores Watts_1973-06-15_122231",
+          "type": "event",
+          "time": "1973-06-15",
+          "title": "High School Graduation",
+          "description": "Delores graduated from her local high school with honors, excelling in literature and history."
+        },
+        {
+          "id": "Delores Watts_1977-09-02_723918",
+          "type": "event",
+          "time": "1977-09-02",
+          "title": "College Enrollment",
+          "description": "She enrolled at the University of Michigan to pursue a degree in English Literature."
+        },
+        {
+          "id": "Delores Watts_1981-05-20_935166",
+          "type": "event",
+          "time": "1981-05-20",
+          "title": "College Graduation",
+          "description": "Delores graduated with a Bachelor's degree in English Literature, receiving the Dean's Award for academic excellence."
+        },
+        {
+          "id": "Delores Watts_1983-11-10_422530",
+          "type": "event",
+          "time": "1983-11-10",
+          "title": "First Job",
+          "description": "She started her first job as an editorial assistant at a publishing house in New York City."
+        },
+        {
+          "id": "Delores Watts_1988-07-25_202107",
+          "type": "event",
+          "time": "1988-07-25",
+          "title": "Marriage",
+          "description": "Delores married her long-time boyfriend, Michael, in a small ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Delores Watts_1992-04-03_19813",
+          "type": "event",
+          "time": "1992-04-03",
+          "title": "First Child",
+          "description": "She gave birth to her first child, a daughter named Emily."
+        },
+        {
+          "id": "Delores Watts_1995-09-18_487215",
+          "type": "event",
+          "time": "1995-09-18",
+          "title": "Promotion",
+          "description": "Delores was promoted to Senior Editor at her publishing house, overseeing a team of editors."
+        },
+        {
+          "id": "Delores Watts_2001-06-22_565120",
+          "type": "event",
+          "time": "2001-06-22",
+          "title": "Second Child",
+          "description": "She gave birth to her second child, a son named Jacob."
+        },
+        {
+          "id": "Delores Watts_2019-12-31_130686",
+          "type": "event",
+          "time": "2019-12-31",
+          "title": "Retirement",
+          "description": "After a successful career spanning over three decades, Delores retired from her position as Executive Editor to spend more time with her family and pursue her passion for writing."
+        },
+        {
+          "id": "Frank Watts_1985-03-15_650547",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "Frank Watts was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Frank Watts_1991-09-01_220012",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Frank started his first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Frank Watts_2003-06-10_778510",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation from Middle School",
+          "description": "Frank graduated from Maplewood Middle School with honors and was awarded a scholarship for his academic achievements."
+        },
+        {
+          "id": "Frank Watts_2007-05-20_453583",
+          "type": "event",
+          "time": "2007-05-20",
+          "title": "High School Graduation",
+          "description": "Frank graduated from Maplewood High School as valedictorian and received a full scholarship to the University of Michigan."
+        },
+        {
+          "id": "Frank Watts_2011-08-25_391254",
+          "type": "event",
+          "time": "2011-08-25",
+          "title": "College Graduation",
+          "description": "Frank graduated from the University of Michigan with a Bachelor's degree in Computer Science and was hired by a leading tech company in Silicon Valley."
+        },
+        {
+          "id": "Frank Watts_2015-02-14_547057",
+          "type": "event",
+          "time": "2015-02-14",
+          "title": "Marriage",
+          "description": "Frank married his long-time girlfriend, Emily, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Frank Watts_2017-09-05_482979",
+          "type": "event",
+          "time": "2017-09-05",
+          "title": "First Child",
+          "description": "Frank and Emily welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "Frank Watts_2020-03-01_715695",
+          "type": "event",
+          "time": "2020-03-01",
+          "title": "Promotion",
+          "description": "Frank was promoted to Senior Software Engineer at his company, recognizing his exceptional contributions to several high-profile projects."
+        },
+        {
+          "id": "Frank Watts_2022-11-25_718406",
+          "type": "event",
+          "time": "2022-11-25",
+          "title": "Family Vacation",
+          "description": "Frank and his family took a memorable vacation to Hawaii, where they enjoyed snorkeling, hiking, and relaxing on the beach."
+        },
+        {
+          "id": "Frank Watts_2023-06-30_313128",
+          "type": "event",
+          "time": "2023-06-30",
+          "title": "Community Service Award",
+          "description": "Frank was awarded the Community Service Award for his volunteer work at a local non-profit organization, where he helped develop a new website and improve their online presence."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Thomas Portillo",
+        "Donald Portillo",
+        "Tiffany Portillo",
+        "John Portillo"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_1985-03-12_272478"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_1991-09-05_210270"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2003-06-15_366207"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2007-08-20_403879"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2011-09-01_103662"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2015-05-18_768295"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2016-02-10_812257"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2019-11-30_258090"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2021-07-25_612394"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Portillo",
+          "dst": "Donald Portillo_2023-04-10_354581"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_1990-03-15_471380"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2006-06-10_117040"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2010-09-01_751565"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2012-08-20_855657"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2014-05-18_413079"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2015-02-03_611043"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2018-11-10_39500"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2020-07-25_799774"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2022-04-12_28217"
+        },
+        {
+          "type": "had_event",
+          "src": "Thomas Portillo",
+          "dst": "Thomas Portillo_2023-09-30_578173"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_1985-03-15_771179"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_1991-09-01_496933"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2003-06-10_31527"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2007-05-20_891506"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2011-08-25_242425"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2013-07-10_940389"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2015-12-15_986071"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2016-02-01_937240"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2019-09-10_565562"
+        },
+        {
+          "type": "had_event",
+          "src": "John Portillo",
+          "dst": "John Portillo_2021-05-05_245620"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_1990-03-15_948804"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2006-06-10_455179"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2010-09-01_391282"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2012-08-20_110643"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2014-05-18_657343"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2014-07-10_313084"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2017-11-03_430137"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2019-02-14_288098"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2021-09-25_542233"
+        },
+        {
+          "type": "had_event",
+          "src": "Tiffany Portillo",
+          "dst": "Tiffany Portillo_2023-04-30_674414"
+        },
+        {
+          "type": "relationship",
+          "src": "Thomas Portillo",
+          "dst": "Tiffany Portillo",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Donald Portillo",
+          "dst": "John Portillo",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Tiffany Portillo",
+          "dst": "John Portillo",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "John Portillo",
+          "dst": "Thomas Portillo",
+          "relationship": "brother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Donald Portillo_1985-03-12_272478",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Donald Portillo was born in a small town in California, USA."
+        },
+        {
+          "id": "Donald Portillo_1991-09-05_210270",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "Donald started his first day of kindergarten at Lincoln Elementary School."
+        },
+        {
+          "id": "Donald Portillo_2003-06-15_366207",
+          "type": "event",
+          "time": "2003-06-15",
+          "title": "Graduation from Middle School",
+          "description": "Donald graduated from Washington Middle School with honors."
+        },
+        {
+          "id": "Donald Portillo_2007-08-20_403879",
+          "type": "event",
+          "time": "2007-08-20",
+          "title": "High School Graduation",
+          "description": "Donald graduated from Jefferson High School, where he was an active member of the debate team."
+        },
+        {
+          "id": "Donald Portillo_2011-09-01_103662",
+          "type": "event",
+          "time": "2011-09-01",
+          "title": "College Enrollment",
+          "description": "Donald enrolled at the University of California, Berkeley, to pursue a degree in Computer Science."
+        },
+        {
+          "id": "Donald Portillo_2015-05-18_768295",
+          "type": "event",
+          "time": "2015-05-18",
+          "title": "College Graduation",
+          "description": "Donald graduated from UC Berkeley with a Bachelor's degree in Computer Science."
+        },
+        {
+          "id": "Donald Portillo_2016-02-10_812257",
+          "type": "event",
+          "time": "2016-02-10",
+          "title": "First Job",
+          "description": "Donald started his first job as a software engineer at a tech startup in San Francisco."
+        },
+        {
+          "id": "Donald Portillo_2019-11-30_258090",
+          "type": "event",
+          "time": "2019-11-30",
+          "title": "Promotion",
+          "description": "Donald was promoted to Senior Software Engineer at his company for his outstanding contributions."
+        },
+        {
+          "id": "Donald Portillo_2021-07-25_612394",
+          "type": "event",
+          "time": "2021-07-25",
+          "title": "Marriage",
+          "description": "Donald married his long-time girlfriend, Emily, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Donald Portillo_2023-04-10_354581",
+          "type": "event",
+          "time": "2023-04-10",
+          "title": "First Child",
+          "description": "Donald and Emily welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "Thomas Portillo_1990-03-15_471380",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Thomas Portillo was born in a small town in California, USA."
+        },
+        {
+          "id": "Thomas Portillo_2006-06-10_117040",
+          "type": "event",
+          "time": "2006-06-10",
+          "title": "High School Graduation",
+          "description": "Thomas graduated from Oakwood High School with honors, excelling in mathematics and science."
+        },
+        {
+          "id": "Thomas Portillo_2010-09-01_751565",
+          "type": "event",
+          "time": "2010-09-01",
+          "title": "College Enrollment",
+          "description": "He enrolled in the University of California, Berkeley, to pursue a degree in Computer Science."
+        },
+        {
+          "id": "Thomas Portillo_2012-08-20_855657",
+          "type": "event",
+          "time": "2012-08-20",
+          "title": "First Internship",
+          "description": "Thomas started his first internship at a tech startup in Silicon Valley, working on web development."
+        },
+        {
+          "id": "Thomas Portillo_2014-05-18_413079",
+          "type": "event",
+          "time": "2014-05-18",
+          "title": "College Graduation",
+          "description": "He graduated from UC Berkeley with a Bachelor's degree in Computer Science, magna cum laude."
+        },
+        {
+          "id": "Thomas Portillo_2015-02-03_611043",
+          "type": "event",
+          "time": "2015-02-03",
+          "title": "First Job",
+          "description": "Thomas began his first full-time job as a software engineer at a leading tech company in San Francisco."
+        },
+        {
+          "id": "Thomas Portillo_2018-11-10_39500",
+          "type": "event",
+          "time": "2018-11-10",
+          "title": "Promotion",
+          "description": "He was promoted to Senior Software Engineer, leading a team of developers on a major project."
+        },
+        {
+          "id": "Thomas Portillo_2020-07-25_799774",
+          "type": "event",
+          "time": "2020-07-25",
+          "title": "Marriage",
+          "description": "Thomas married his long-time girlfriend, Emily, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Thomas Portillo_2022-04-12_28217",
+          "type": "event",
+          "time": "2022-04-12",
+          "title": "First Child",
+          "description": "Thomas and Emily welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "Thomas Portillo_2023-09-30_578173",
+          "type": "event",
+          "time": "2023-09-30",
+          "title": "Career Change",
+          "description": "He decided to transition into a new role as a Data Scientist at a cutting-edge AI research firm."
+        },
+        {
+          "id": "John Portillo_1985-03-15_771179",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "John Portillo was born in a small town in California, USA."
+        },
+        {
+          "id": "John Portillo_1991-09-01_496933",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "John started his first day of kindergarten at Lincoln Elementary School."
+        },
+        {
+          "id": "John Portillo_2003-06-10_31527",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation from Middle School",
+          "description": "John graduated from Washington Middle School with honors."
+        },
+        {
+          "id": "John Portillo_2007-05-20_891506",
+          "type": "event",
+          "time": "2007-05-20",
+          "title": "High School Graduation",
+          "description": "John graduated from Jefferson High School, where he was a member of the soccer team."
+        },
+        {
+          "id": "John Portillo_2011-08-25_242425",
+          "type": "event",
+          "time": "2011-08-25",
+          "title": "College Enrollment",
+          "description": "John enrolled at the University of California, Berkeley, to study Computer Science."
+        },
+        {
+          "id": "John Portillo_2013-07-10_940389",
+          "type": "event",
+          "time": "2013-07-10",
+          "title": "First Internship",
+          "description": "John started his first internship at a tech startup in Silicon Valley, gaining valuable experience in software development."
+        },
+        {
+          "id": "John Portillo_2015-12-15_986071",
+          "type": "event",
+          "time": "2015-12-15",
+          "title": "College Graduation",
+          "description": "John graduated from UC Berkeley with a Bachelor's degree in Computer Science."
+        },
+        {
+          "id": "John Portillo_2016-02-01_937240",
+          "type": "event",
+          "time": "2016-02-01",
+          "title": "First Full-Time Job",
+          "description": "John began his first full-time job as a software engineer at a leading tech company in San Francisco."
+        },
+        {
+          "id": "John Portillo_2019-09-10_565562",
+          "type": "event",
+          "time": "2019-09-10",
+          "title": "Marriage",
+          "description": "John married his long-time girlfriend, Maria, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "John Portillo_2021-05-05_245620",
+          "type": "event",
+          "time": "2021-05-05",
+          "title": "Birth of First Child",
+          "description": "John and Maria welcomed their first child, a baby girl named Sophia, into the world."
+        },
+        {
+          "id": "Tiffany Portillo_1990-03-15_948804",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Tiffany Portillo was born in a small town in California, USA."
+        },
+        {
+          "id": "Tiffany Portillo_2006-06-10_455179",
+          "type": "event",
+          "time": "2006-06-10",
+          "title": "High School Graduation",
+          "description": "Graduated from Oakwood High School with honors, receiving a scholarship for academic excellence."
+        },
+        {
+          "id": "Tiffany Portillo_2010-09-01_391282",
+          "type": "event",
+          "time": "2010-09-01",
+          "title": "College Enrollment",
+          "description": "Enrolled in the University of California, Berkeley, to pursue a degree in Computer Science."
+        },
+        {
+          "id": "Tiffany Portillo_2012-08-20_110643",
+          "type": "event",
+          "time": "2012-08-20",
+          "title": "First Internship",
+          "description": "Started a summer internship at a tech startup, gaining hands-on experience in software development."
+        },
+        {
+          "id": "Tiffany Portillo_2014-05-18_657343",
+          "type": "event",
+          "time": "2014-05-18",
+          "title": "College Graduation",
+          "description": "Graduated from UC Berkeley with a Bachelor's degree in Computer Science, summa cum laude."
+        },
+        {
+          "id": "Tiffany Portillo_2014-07-10_313084",
+          "type": "event",
+          "time": "2014-07-10",
+          "title": "First Job",
+          "description": "Joined a leading tech company as a software engineer, working on innovative projects."
+        },
+        {
+          "id": "Tiffany Portillo_2017-11-03_430137",
+          "type": "event",
+          "time": "2017-11-03",
+          "title": "Promotion",
+          "description": "Promoted to Senior Software Engineer for outstanding contributions to the company's flagship product."
+        },
+        {
+          "id": "Tiffany Portillo_2019-02-14_288098",
+          "type": "event",
+          "time": "2019-02-14",
+          "title": "Marriage",
+          "description": "Married long-time partner, Daniel, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Tiffany Portillo_2021-09-25_542233",
+          "type": "event",
+          "time": "2021-09-25",
+          "title": "First Child",
+          "description": "Welcomed a baby girl, Sophia, into the family, marking a new chapter in life."
+        },
+        {
+          "id": "Tiffany Portillo_2023-04-30_674414",
+          "type": "event",
+          "time": "2023-04-30",
+          "title": "Entrepreneurial Venture",
+          "description": "Co-founded a tech startup focused on sustainable energy solutions, taking on the role of CTO."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Jill Quevedo",
+        "Eric Quevedo",
+        "Mildred Quevedo"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_1990-03-15_183179"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2006-06-01_414373"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2010-09-20_418711"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2014-04-12_476048"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2015-03-30_966698"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2016-02-10_39010"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2018-11-05_821506"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2020-08-22_11459"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2022-05-18_468472"
+        },
+        {
+          "type": "had_event",
+          "src": "Mildred Quevedo",
+          "dst": "Mildred Quevedo_2023-10-10_723354"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_1990-03-15_430436"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2006-06-10_84858"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2010-09-01_881564"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2012-08-20_704471"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2014-06-30_54332"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2015-02-15_446505"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2017-11-10_425068"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2019-05-20_174277"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2021-03-05_161148"
+        },
+        {
+          "type": "had_event",
+          "src": "Jill Quevedo",
+          "dst": "Jill Quevedo_2023-12-12_564544"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_1985-03-12_460608"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_1991-09-05_41525"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_1998-06-20_500523"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2002-11-10_314662"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2005-05-15_104747"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2009-09-22_46693"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2012-03-03_45549"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2014-08-18_257035"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2016-12-25_587973"
+        },
+        {
+          "type": "had_event",
+          "src": "Eric Quevedo",
+          "dst": "Eric Quevedo_2018-07-07_236615"
+        },
+        {
+          "type": "relationship",
+          "src": "Jill Quevedo",
+          "dst": "Eric Quevedo",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Eric Quevedo",
+          "dst": "Jill Quevedo",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Mildred Quevedo",
+          "dst": "Eric Quevedo",
+          "relationship": "mother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Mildred Quevedo_1990-03-15_183179",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Mildred Quevedo was born in a small town in the Philippines."
+        },
+        {
+          "id": "Mildred Quevedo_2006-06-01_414373",
+          "type": "event",
+          "time": "2006-06-01",
+          "title": "High School Graduation",
+          "description": "Mildred graduated from Saint Mary's Academy with honors, marking the end of her secondary education."
+        },
+        {
+          "id": "Mildred Quevedo_2010-09-20_418711",
+          "type": "event",
+          "time": "2010-09-20",
+          "title": "University Enrollment",
+          "description": "She enrolled in the University of the Philippines, pursuing a degree in Computer Science."
+        },
+        {
+          "id": "Mildred Quevedo_2014-04-12_476048",
+          "type": "event",
+          "time": "2014-04-12",
+          "title": "First Internship",
+          "description": "Mildred started her first internship at a local tech startup, gaining valuable experience in software development."
+        },
+        {
+          "id": "Mildred Quevedo_2015-03-30_966698",
+          "type": "event",
+          "time": "2015-03-30",
+          "title": "University Graduation",
+          "description": "She graduated with a Bachelor of Science in Computer Science, cum laude."
+        },
+        {
+          "id": "Mildred Quevedo_2016-02-10_39010",
+          "type": "event",
+          "time": "2016-02-10",
+          "title": "First Job",
+          "description": "Mildred began her first full-time job as a software engineer at a multinational IT company."
+        },
+        {
+          "id": "Mildred Quevedo_2018-11-05_821506",
+          "type": "event",
+          "time": "2018-11-05",
+          "title": "Promotion",
+          "description": "She was promoted to Senior Software Engineer after demonstrating exceptional skills and leadership."
+        },
+        {
+          "id": "Mildred Quevedo_2020-08-22_11459",
+          "type": "event",
+          "time": "2020-08-22",
+          "title": "Marriage",
+          "description": "Mildred married her long-time partner, John, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Mildred Quevedo_2022-05-18_468472",
+          "type": "event",
+          "time": "2022-05-18",
+          "title": "First Child",
+          "description": "She gave birth to her first child, a baby girl named Maria, marking a new chapter in her life."
+        },
+        {
+          "id": "Mildred Quevedo_2023-10-10_723354",
+          "type": "event",
+          "time": "2023-10-10",
+          "title": "Career Change",
+          "description": "Mildred transitioned to a new role as a Tech Lead at a cutting-edge AI research firm, pursuing her passion for innovation."
+        },
+        {
+          "id": "Jill Quevedo_1990-03-15_430436",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Jill Quevedo was born in a small town in California, USA."
+        },
+        {
+          "id": "Jill Quevedo_2006-06-10_84858",
+          "type": "event",
+          "time": "2006-06-10",
+          "title": "High School Graduation",
+          "description": "Jill graduated from Oakwood High School with honors, excelling in science and mathematics."
+        },
+        {
+          "id": "Jill Quevedo_2010-09-01_881564",
+          "type": "event",
+          "time": "2010-09-01",
+          "title": "College Enrollment",
+          "description": "She began her undergraduate studies at the University of California, Berkeley, majoring in Computer Science."
+        },
+        {
+          "id": "Jill Quevedo_2012-08-20_704471",
+          "type": "event",
+          "time": "2012-08-20",
+          "title": "First Internship",
+          "description": "Jill secured an internship at a local tech startup, where she worked on developing a mobile application for iOS."
+        },
+        {
+          "id": "Jill Quevedo_2014-06-30_54332",
+          "type": "event",
+          "time": "2014-06-30",
+          "title": "Bachelor's Degree",
+          "description": "She graduated with a Bachelor of Science in Computer Science, receiving the Outstanding Student Award."
+        },
+        {
+          "id": "Jill Quevedo_2015-02-15_446505",
+          "type": "event",
+          "time": "2015-02-15",
+          "title": "First Job",
+          "description": "Jill started her career as a software engineer at a renowned tech company in Silicon Valley."
+        },
+        {
+          "id": "Jill Quevedo_2017-11-10_425068",
+          "type": "event",
+          "time": "2017-11-10",
+          "title": "Promotion",
+          "description": "She was promoted to Senior Software Engineer, leading a team of developers on a major project."
+        },
+        {
+          "id": "Jill Quevedo_2019-05-20_174277",
+          "type": "event",
+          "time": "2019-05-20",
+          "title": "Marriage",
+          "description": "Jill married her long-time partner, Michael, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Jill Quevedo_2021-03-05_161148",
+          "type": "event",
+          "time": "2021-03-05",
+          "title": "Entrepreneurial Venture",
+          "description": "She co-founded a tech startup focused on developing AI-powered solutions for healthcare, serving as the CTO."
+        },
+        {
+          "id": "Jill Quevedo_2023-12-12_564544",
+          "type": "event",
+          "time": "2023-12-12",
+          "title": "Industry Recognition",
+          "description": "Jill was featured in a leading tech magazine as one of the 'Top 30 Innovators Under 35' for her contributions to AI in healthcare."
+        },
+        {
+          "id": "Eric Quevedo_1985-03-12_460608",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Eric Quevedo was born in a small town in Spain, surrounded by his loving family."
+        },
+        {
+          "id": "Eric Quevedo_1991-09-05_41525",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "Eric started his first day of elementary school, where he met his best friend, Miguel."
+        },
+        {
+          "id": "Eric Quevedo_1998-06-20_500523",
+          "type": "event",
+          "time": "1998-06-20",
+          "title": "Family Vacation",
+          "description": "The Quevedo family took a memorable trip to the Canary Islands, where Eric developed a love for the ocean."
+        },
+        {
+          "id": "Eric Quevedo_2002-11-10_314662",
+          "type": "event",
+          "time": "2002-11-10",
+          "title": "First Job",
+          "description": "Eric got his first part-time job at a local bookstore, sparking his interest in literature."
+        },
+        {
+          "id": "Eric Quevedo_2005-05-15_104747",
+          "type": "event",
+          "time": "2005-05-15",
+          "title": "High School Graduation",
+          "description": "Eric graduated from high school with honors and was awarded a scholarship for his academic achievements."
+        },
+        {
+          "id": "Eric Quevedo_2009-09-22_46693",
+          "type": "event",
+          "time": "2009-09-22",
+          "title": "University Enrollment",
+          "description": "He began his studies in Computer Science at the University of Barcelona, marking the start of his higher education journey."
+        },
+        {
+          "id": "Eric Quevedo_2012-03-03_45549",
+          "type": "event",
+          "time": "2012-03-03",
+          "title": "Study Abroad",
+          "description": "Eric spent a semester studying abroad in California, USA, where he gained valuable international experience."
+        },
+        {
+          "id": "Eric Quevedo_2014-08-18_257035",
+          "type": "event",
+          "time": "2014-08-18",
+          "title": "First Publication",
+          "description": "His first research paper on machine learning was published in a renowned computer science journal."
+        },
+        {
+          "id": "Eric Quevedo_2016-12-25_587973",
+          "type": "event",
+          "time": "2016-12-25",
+          "title": "Engagement",
+          "description": "Eric proposed to his long-time girlfriend, Sofia, during a family gathering on Christmas Day."
+        },
+        {
+          "id": "Eric Quevedo_2018-07-07_236615",
+          "type": "event",
+          "time": "2018-07-07",
+          "title": "Wedding Day",
+          "description": "Eric and Sofia exchanged vows in a beautiful ceremony attended by their closest friends and family."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Jerry Hill",
+        "Carol Hill",
+        "Deborah Hill",
+        "Donald Hill"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_1990-03-15_732219"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2006-06-01_152486"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2010-08-20_949311"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2014-05-10_732468"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2015-09-03_390858"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2018-11-12_372556"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2020-02-28_230979"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2021-07-05_452210"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2022-09-30_820131"
+        },
+        {
+          "type": "had_event",
+          "src": "Carol Hill",
+          "dst": "Carol Hill_2023-04-18_740598"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_1985-03-15_986603"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_1991-09-01_196756"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2003-06-10_792746"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2007-08-20_672043"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2011-05-30_354336"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2012-09-05_964951"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2015-11-12_811365"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2018-02-28_785654"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2021-07-15_409790"
+        },
+        {
+          "type": "had_event",
+          "src": "Deborah Hill",
+          "dst": "Deborah Hill_2023-04-20_535123"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_1958-03-15_308733"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_1976-06-01_388924"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_1982-05-30_179262"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_1985-09-10_363601"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_1990-11-20_20354"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_1995-03-05_606676"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_2000-07-12_488423"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_2005-08-25_197792"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_2012-10-10_848488"
+        },
+        {
+          "type": "had_event",
+          "src": "Jerry Hill",
+          "dst": "Jerry Hill_2021-12-25_515855"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1955-03-12_399737"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1973-06-15_262760"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1977-08-20_170406"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1978-02-10_546154"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1982-11-05_449944"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1985-07-18_574701"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1989-09-30_728744"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_1992-04-22_578289"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_2001-06-10_747110"
+        },
+        {
+          "type": "had_event",
+          "src": "Donald Hill",
+          "dst": "Donald Hill_2015-12-25_476159"
+        },
+        {
+          "type": "relationship",
+          "src": "Jerry Hill",
+          "dst": "Donald Hill",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Carol Hill",
+          "dst": "Jerry Hill",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Deborah Hill",
+          "dst": "Jerry Hill",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Donald Hill",
+          "dst": "Deborah Hill",
+          "relationship": "brother"
+        }
+      ],
+      "events": [
+        {
+          "id": "Carol Hill_1990-03-15_732219",
+          "type": "event",
+          "time": "1990-03-15",
+          "title": "Birth",
+          "description": "Carol Hill was born in a small town in Ohio."
+        },
+        {
+          "id": "Carol Hill_2006-06-01_152486",
+          "type": "event",
+          "time": "2006-06-01",
+          "title": "High School Graduation",
+          "description": "Carol graduated from her local high school with honors."
+        },
+        {
+          "id": "Carol Hill_2010-08-20_949311",
+          "type": "event",
+          "time": "2010-08-20",
+          "title": "College Enrollment",
+          "description": "Carol began her studies at the University of Michigan, majoring in Biology."
+        },
+        {
+          "id": "Carol Hill_2014-05-10_732468",
+          "type": "event",
+          "time": "2014-05-10",
+          "title": "Bachelor's Degree",
+          "description": "Carol graduated with a Bachelor's degree in Biology, cum laude."
+        },
+        {
+          "id": "Carol Hill_2015-09-03_390858",
+          "type": "event",
+          "time": "2015-09-03",
+          "title": "First Job",
+          "description": "Carol started her first job as a research assistant at a local biotechnology firm."
+        },
+        {
+          "id": "Carol Hill_2018-11-12_372556",
+          "type": "event",
+          "time": "2018-11-12",
+          "title": "Promotion",
+          "description": "Carol was promoted to a senior research position within the company."
+        },
+        {
+          "id": "Carol Hill_2020-02-28_230979",
+          "type": "event",
+          "time": "2020-02-28",
+          "title": "Marriage",
+          "description": "Carol married her long-time boyfriend, Mark, in a small ceremony."
+        },
+        {
+          "id": "Carol Hill_2021-07-05_452210",
+          "type": "event",
+          "time": "2021-07-05",
+          "title": "Home Purchase",
+          "description": "Carol and Mark purchased their first home in a suburban neighborhood."
+        },
+        {
+          "id": "Carol Hill_2022-09-30_820131",
+          "type": "event",
+          "time": "2022-09-30",
+          "title": "Childbirth",
+          "description": "Carol gave birth to her first child, a daughter named Emily."
+        },
+        {
+          "id": "Carol Hill_2023-04-18_740598",
+          "type": "event",
+          "time": "2023-04-18",
+          "title": "Career Change",
+          "description": "Carol transitioned to a new role as a science teacher at a local high school."
+        },
+        {
+          "id": "Deborah Hill_1985-03-15_986603",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "Deborah Hill was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Deborah Hill_1991-09-01_196756",
+          "type": "event",
+          "time": "1991-09-01",
+          "title": "First Day of School",
+          "description": "Deborah started her first day of kindergarten at Maplewood Elementary School."
+        },
+        {
+          "id": "Deborah Hill_2003-06-10_792746",
+          "type": "event",
+          "time": "2003-06-10",
+          "title": "Graduation",
+          "description": "Deborah graduated from high school with honors and was awarded a scholarship for her academic achievements."
+        },
+        {
+          "id": "Deborah Hill_2007-08-20_672043",
+          "type": "event",
+          "time": "2007-08-20",
+          "title": "College Enrollment",
+          "description": "Deborah began her undergraduate studies in Biology at the University of Michigan."
+        },
+        {
+          "id": "Deborah Hill_2011-05-30_354336",
+          "type": "event",
+          "time": "2011-05-30",
+          "title": "Bachelor's Degree",
+          "description": "Deborah graduated with a Bachelor's degree in Biology, cum laude."
+        },
+        {
+          "id": "Deborah Hill_2012-09-05_964951",
+          "type": "event",
+          "time": "2012-09-05",
+          "title": "First Job",
+          "description": "Deborah started her first job as a research assistant at a biotechnology company in Boston."
+        },
+        {
+          "id": "Deborah Hill_2015-11-12_811365",
+          "type": "event",
+          "time": "2015-11-12",
+          "title": "Marriage",
+          "description": "Deborah married her long-time boyfriend, Michael, in a small ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Deborah Hill_2018-02-28_785654",
+          "type": "event",
+          "time": "2018-02-28",
+          "title": "Promotion",
+          "description": "Deborah was promoted to Senior Research Scientist at her company for her outstanding contributions to a groundbreaking project."
+        },
+        {
+          "id": "Deborah Hill_2021-07-15_409790",
+          "type": "event",
+          "time": "2021-07-15",
+          "title": "Home Purchase",
+          "description": "Deborah and Michael purchased their first home in a suburban neighborhood outside of Boston."
+        },
+        {
+          "id": "Deborah Hill_2023-04-20_535123",
+          "type": "event",
+          "time": "2023-04-20",
+          "title": "Award Recognition",
+          "description": "Deborah received the Young Scientist Award from the American Society for Biochemistry and Molecular Biology for her innovative research."
+        },
+        {
+          "id": "Jerry Hill_1958-03-15_308733",
+          "type": "event",
+          "time": "1958-03-15",
+          "title": "Birth",
+          "description": "Jerry Hill was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Jerry Hill_1976-06-01_388924",
+          "type": "event",
+          "time": "1976-06-01",
+          "title": "High School Graduation",
+          "description": "Jerry graduated from Springfield High School with honors, excelling in mathematics and science."
+        },
+        {
+          "id": "Jerry Hill_1982-05-30_179262",
+          "type": "event",
+          "time": "1982-05-30",
+          "title": "College Graduation",
+          "description": "Jerry earned a Bachelor's degree in Computer Science from MIT, where he was known for his innovative projects."
+        },
+        {
+          "id": "Jerry Hill_1985-09-10_363601",
+          "type": "event",
+          "time": "1985-09-10",
+          "title": "First Job",
+          "description": "Jerry started his first job as a software developer at a tech startup in Silicon Valley."
+        },
+        {
+          "id": "Jerry Hill_1990-11-20_20354",
+          "type": "event",
+          "time": "1990-11-20",
+          "title": "Marriage",
+          "description": "Jerry married his college sweetheart, Linda, in a small ceremony attended by close friends and family."
+        },
+        {
+          "id": "Jerry Hill_1995-03-05_606676",
+          "type": "event",
+          "time": "1995-03-05",
+          "title": "First Child",
+          "description": "Jerry and Linda welcomed their first child, a daughter named Emily."
+        },
+        {
+          "id": "Jerry Hill_2000-07-12_488423",
+          "type": "event",
+          "time": "2000-07-12",
+          "title": "Promotion to CTO",
+          "description": "Jerry was promoted to Chief Technology Officer at his company, overseeing all technological developments."
+        },
+        {
+          "id": "Jerry Hill_2005-08-25_197792",
+          "type": "event",
+          "time": "2005-08-25",
+          "title": "Patent Awarded",
+          "description": "Jerry was awarded a patent for a groundbreaking algorithm that improved data encryption methods."
+        },
+        {
+          "id": "Jerry Hill_2012-10-10_848488",
+          "type": "event",
+          "time": "2012-10-10",
+          "title": "Retirement",
+          "description": "After a successful career, Jerry retired to spend more time with his family and pursue personal interests."
+        },
+        {
+          "id": "Jerry Hill_2021-12-25_515855",
+          "type": "event",
+          "time": "2021-12-25",
+          "title": "Grandparenthood",
+          "description": "Jerry became a grandfather when his daughter Emily gave birth to a baby boy named Lucas."
+        },
+        {
+          "id": "Donald Hill_1955-03-12_399737",
+          "type": "event",
+          "time": "1955-03-12",
+          "title": "Birth",
+          "description": "Donald Hill was born in a small town in Ohio, USA."
+        },
+        {
+          "id": "Donald Hill_1973-06-15_262760",
+          "type": "event",
+          "time": "1973-06-15",
+          "title": "High School Graduation",
+          "description": "Donald graduated from Springfield High School with honors, excelling in mathematics and science."
+        },
+        {
+          "id": "Donald Hill_1977-08-20_170406",
+          "type": "event",
+          "time": "1977-08-20",
+          "title": "College Graduation",
+          "description": "He earned a Bachelor's degree in Electrical Engineering from Ohio State University."
+        },
+        {
+          "id": "Donald Hill_1978-02-10_546154",
+          "type": "event",
+          "time": "1978-02-10",
+          "title": "First Job",
+          "description": "Donald started his first job as a junior engineer at a local electronics firm, TechInnovate."
+        },
+        {
+          "id": "Donald Hill_1982-11-05_449944",
+          "type": "event",
+          "time": "1982-11-05",
+          "title": "Marriage",
+          "description": "He married his college sweetheart, Emily, in a small ceremony attended by close friends and family."
+        },
+        {
+          "id": "Donald Hill_1985-07-18_574701",
+          "type": "event",
+          "time": "1985-07-18",
+          "title": "First Child",
+          "description": "Donald and Emily welcomed their first child, a daughter named Sarah."
+        },
+        {
+          "id": "Donald Hill_1989-09-30_728744",
+          "type": "event",
+          "time": "1989-09-30",
+          "title": "Promotion",
+          "description": "He was promoted to Senior Engineer at TechInnovate, leading a team working on cutting-edge projects."
+        },
+        {
+          "id": "Donald Hill_1992-04-22_578289",
+          "type": "event",
+          "time": "1992-04-22",
+          "title": "Second Child",
+          "description": "The couple had their second child, a son named Michael."
+        },
+        {
+          "id": "Donald Hill_2001-06-10_747110",
+          "type": "event",
+          "time": "2001-06-10",
+          "title": "Entrepreneurial Venture",
+          "description": "Donald co-founded a tech startup, HillTech Solutions, focusing on renewable energy technologies."
+        },
+        {
+          "id": "Donald Hill_2015-12-25_476159",
+          "type": "event",
+          "time": "2015-12-25",
+          "title": "Retirement",
+          "description": "After a successful career, Donald retired to spend more time with his family and pursue hobbies like gardening and woodworking."
+        }
+      ]
+    },
+    {
+      "members": [
+        "Nicole Ortega",
+        "Ronald Ortega",
+        "Lisa Ortega"
+      ],
+      "edges": [
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_1985-03-12_506361"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_1991-09-05_691195"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_1998-06-15_244549"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2003-08-22_870001"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2007-05-30_88912"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2009-11-10_120706"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2013-07-18_536359"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2016-02-25_651861"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2020-09-05_223895"
+        },
+        {
+          "type": "had_event",
+          "src": "Lisa Ortega",
+          "dst": "Lisa Ortega_2023-04-12_533845"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_1990-05-12_214838"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2002-06-20_506062"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2006-07-15_769547"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2010-09-01_433603"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2012-03-10_465130"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2014-11-25_612233"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2017-08-30_995909"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2019-04-12_693553"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2021-02-18_647090"
+        },
+        {
+          "type": "had_event",
+          "src": "Nicole Ortega",
+          "dst": "Nicole Ortega_2023-09-05_677137"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_1985-03-15_73337"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_1991-06-01_343126"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2000-08-20_854376"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2003-05-10_957707"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2007-03-25_246574"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2011-06-15_147384"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2015-11-30_80658"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2017-04-22_162666"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2018-02-10_28752"
+        },
+        {
+          "type": "had_event",
+          "src": "Ronald Ortega",
+          "dst": "Ronald Ortega_2021-09-05_279484"
+        },
+        {
+          "type": "relationship",
+          "src": "Nicole Ortega",
+          "dst": "Lisa Ortega",
+          "relationship": "sister"
+        },
+        {
+          "type": "relationship",
+          "src": "Ronald Ortega",
+          "dst": "Nicole Ortega",
+          "relationship": "brother"
+        },
+        {
+          "type": "relationship",
+          "src": "Lisa Ortega",
+          "dst": "Ronald Ortega",
+          "relationship": "sister"
+        }
+      ],
+      "events": [
+        {
+          "id": "Lisa Ortega_1985-03-12_506361",
+          "type": "event",
+          "time": "1985-03-12",
+          "title": "Birth",
+          "description": "Lisa Ortega was born in a small town in California."
+        },
+        {
+          "id": "Lisa Ortega_1991-09-05_691195",
+          "type": "event",
+          "time": "1991-09-05",
+          "title": "First Day of School",
+          "description": "Lisa started her first day of kindergarten at Oakwood Elementary School."
+        },
+        {
+          "id": "Lisa Ortega_1998-06-15_244549",
+          "type": "event",
+          "time": "1998-06-15",
+          "title": "Talent Show Winner",
+          "description": "Lisa won first place in her school's talent show for her piano performance."
+        },
+        {
+          "id": "Lisa Ortega_2003-08-22_870001",
+          "type": "event",
+          "time": "2003-08-22",
+          "title": "High School Graduation",
+          "description": "Lisa graduated from Lincoln High School with honors."
+        },
+        {
+          "id": "Lisa Ortega_2007-05-30_88912",
+          "type": "event",
+          "time": "2007-05-30",
+          "title": "College Graduation",
+          "description": "Lisa graduated from the University of California, Berkeley with a degree in Psychology."
+        },
+        {
+          "id": "Lisa Ortega_2009-11-10_120706",
+          "type": "event",
+          "time": "2009-11-10",
+          "title": "First Job",
+          "description": "Lisa started her first full-time job as a counselor at a local community center."
+        },
+        {
+          "id": "Lisa Ortega_2013-07-18_536359",
+          "type": "event",
+          "time": "2013-07-18",
+          "title": "Marriage",
+          "description": "Lisa married her long-time boyfriend, Mark, in a beautiful ceremony surrounded by family and friends."
+        },
+        {
+          "id": "Lisa Ortega_2016-02-25_651861",
+          "type": "event",
+          "time": "2016-02-25",
+          "title": "First Child",
+          "description": "Lisa gave birth to her first child, a baby girl named Sophia."
+        },
+        {
+          "id": "Lisa Ortega_2020-09-05_223895",
+          "type": "event",
+          "time": "2020-09-05",
+          "title": "Promotion",
+          "description": "Lisa was promoted to Director of Counseling Services at her workplace."
+        },
+        {
+          "id": "Lisa Ortega_2023-04-12_533845",
+          "type": "event",
+          "time": "2023-04-12",
+          "title": "Family Vacation",
+          "description": "Lisa and her family went on a memorable vacation to Hawaii, creating lasting memories."
+        },
+        {
+          "id": "Nicole Ortega_1990-05-12_214838",
+          "type": "event",
+          "time": "1990-05-12",
+          "title": "Birth",
+          "description": "Nicole Ortega was born in a small town in Spain, surrounded by her loving family."
+        },
+        {
+          "id": "Nicole Ortega_2002-06-20_506062",
+          "type": "event",
+          "time": "2002-06-20",
+          "title": "First International Trip",
+          "description": "Nicole traveled to France with her school for a cultural exchange program, sparking her love for travel."
+        },
+        {
+          "id": "Nicole Ortega_2006-07-15_769547",
+          "type": "event",
+          "time": "2006-07-15",
+          "title": "High School Graduation",
+          "description": "She graduated as valedictorian of her high school class, giving an inspiring speech about pursuing dreams."
+        },
+        {
+          "id": "Nicole Ortega_2010-09-01_433603",
+          "type": "event",
+          "time": "2010-09-01",
+          "title": "University Enrollment",
+          "description": "Nicole began her studies in International Relations at the University of Madrid, eager to make a global impact."
+        },
+        {
+          "id": "Nicole Ortega_2012-03-10_465130",
+          "type": "event",
+          "time": "2012-03-10",
+          "title": "Study Abroad in Japan",
+          "description": "She spent a semester studying in Tokyo, immersing herself in Japanese culture and language."
+        },
+        {
+          "id": "Nicole Ortega_2014-11-25_612233",
+          "type": "event",
+          "time": "2014-11-25",
+          "title": "First Job Offer",
+          "description": "Nicole accepted a position at a non-profit organization focused on global education initiatives."
+        },
+        {
+          "id": "Nicole Ortega_2017-08-30_995909",
+          "type": "event",
+          "time": "2017-08-30",
+          "title": "Master's Degree Completion",
+          "description": "She completed her Master's in Public Policy, graduating with honors and a thesis on education reform."
+        },
+        {
+          "id": "Nicole Ortega_2019-04-12_693553",
+          "type": "event",
+          "time": "2019-04-12",
+          "title": "Marriage",
+          "description": "Nicole married her long-time partner, Javier, in a beautiful ceremony attended by family and friends."
+        },
+        {
+          "id": "Nicole Ortega_2021-02-18_647090",
+          "type": "event",
+          "time": "2021-02-18",
+          "title": "First Child's Birth",
+          "description": "She gave birth to her first child, a daughter named Sofia, marking a new chapter in her life."
+        },
+        {
+          "id": "Nicole Ortega_2023-09-05_677137",
+          "type": "event",
+          "time": "2023-09-05",
+          "title": "Promotion to Director",
+          "description": "Nicole was promoted to Director of Global Programs at her organization, recognizing her leadership and impact."
+        },
+        {
+          "id": "Ronald Ortega_1985-03-15_73337",
+          "type": "event",
+          "time": "1985-03-15",
+          "title": "Birth",
+          "description": "Ronald Ortega was born in a small town in the Philippines."
+        },
+        {
+          "id": "Ronald Ortega_1991-06-01_343126",
+          "type": "event",
+          "time": "1991-06-01",
+          "title": "First Day of School",
+          "description": "Ronald started his formal education at a local elementary school, marking the beginning of his academic journey."
+        },
+        {
+          "id": "Ronald Ortega_2000-08-20_854376",
+          "type": "event",
+          "time": "2000-08-20",
+          "title": "Family Relocation",
+          "description": "The Ortega family moved to Manila for better job opportunities, significantly changing Ronald's environment and social circle."
+        },
+        {
+          "id": "Ronald Ortega_2003-05-10_957707",
+          "type": "event",
+          "time": "2003-05-10",
+          "title": "First Job",
+          "description": "Ronald landed his first part-time job at a local bookstore, gaining early work experience and financial independence."
+        },
+        {
+          "id": "Ronald Ortega_2007-03-25_246574",
+          "type": "event",
+          "time": "2007-03-25",
+          "title": "High School Graduation",
+          "description": "Ronald graduated from high school with honors, celebrated by family and friends."
+        },
+        {
+          "id": "Ronald Ortega_2011-06-15_147384",
+          "type": "event",
+          "time": "2011-06-15",
+          "title": "University Enrollment",
+          "description": "Ronald enrolled in the University of the Philippines, pursuing a degree in Computer Science."
+        },
+        {
+          "id": "Ronald Ortega_2015-11-30_80658",
+          "type": "event",
+          "time": "2015-11-30",
+          "title": "First Software Project",
+          "description": "Ronald completed his first major software project as part of his university coursework, showcasing his programming skills."
+        },
+        {
+          "id": "Ronald Ortega_2017-04-22_162666",
+          "type": "event",
+          "time": "2017-04-22",
+          "title": "Graduation from University",
+          "description": "Ronald graduated with a Bachelor's degree in Computer Science, ready to enter the professional world."
+        },
+        {
+          "id": "Ronald Ortega_2018-02-10_28752",
+          "type": "event",
+          "time": "2018-02-10",
+          "title": "First Full-Time Job",
+          "description": "Ronald started his first full-time job as a software developer at a tech startup in Manila."
+        },
+        {
+          "id": "Ronald Ortega_2021-09-05_279484",
+          "type": "event",
+          "time": "2021-09-05",
+          "title": "Promotion to Senior Developer",
+          "description": "Ronald was promoted to Senior Software Developer, recognizing his contributions and expertise in the field."
+        }
+      ]
+    }
+  ],
+  "cross_family_edges": [
+    {
+      "type": "relationship",
+      "src": "Nicole Aube",
+      "dst": "Jill Quevedo",
+      "relationship": "college roommate",
+      "src_family_idx": 4,
+      "dst_family_idx": 7
+    },
+    {
+      "type": "relationship",
+      "src": "Samuel Aube",
+      "dst": "Eric Quevedo",
+      "relationship": "College roommate",
+      "src_family_idx": 4,
+      "dst_family_idx": 7
+    },
+    {
+      "type": "relationship",
+      "src": "David Kluesner",
+      "dst": "Marie Swirsky",
+      "relationship": "Childhood friend",
+      "src_family_idx": 2,
+      "dst_family_idx": 3
+    },
+    {
+      "type": "relationship",
+      "src": "Beth Kluesner",
+      "dst": "William Swirsky",
+      "relationship": "college roommate",
+      "src_family_idx": 2,
+      "dst_family_idx": 3
+    },
+    {
+      "type": "relationship",
+      "src": "Tiffany Portillo",
+      "dst": "Deborah Hill",
+      "relationship": "college roommate",
+      "src_family_idx": 6,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "John Portillo",
+      "dst": "Carol Hill",
+      "relationship": "college roommate's sibling's childhood friend",
+      "src_family_idx": 6,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Melissa Bigley",
+      "dst": "Nicole Aube",
+      "relationship": "childhood friend",
+      "src_family_idx": 0,
+      "dst_family_idx": 4
+    },
+    {
+      "type": "relationship",
+      "src": "Emily Bigley",
+      "dst": "Samuel Aube",
+      "relationship": "college roommate",
+      "src_family_idx": 0,
+      "dst_family_idx": 4
+    },
+    {
+      "type": "relationship",
+      "src": "Helen Bigley",
+      "dst": "Donald Portillo",
+      "relationship": "Childhood friend",
+      "src_family_idx": 0,
+      "dst_family_idx": 6
+    },
+    {
+      "type": "relationship",
+      "src": "Michael Bigley",
+      "dst": "Thomas Portillo",
+      "relationship": "college roommate",
+      "src_family_idx": 0,
+      "dst_family_idx": 6
+    },
+    {
+      "type": "relationship",
+      "src": "David Kluesner",
+      "dst": "Mildred Quevedo",
+      "relationship": "Former coworker**  \n\n(Explanation: Since there are no direct family ties between David Kluesner and Mildred Quevedo, a social or activity-based relationship is appropriate. \"Former coworker\" is specific, concrete, and does not contradict any existing family connections.)",
+      "src_family_idx": 2,
+      "dst_family_idx": 7
+    },
+    {
+      "type": "relationship",
+      "src": "Debbie Kluesner",
+      "dst": "Jill Quevedo",
+      "relationship": "College Roommate**  \n\n(Explanation: Since there are no direct family ties between Debbie Kluesner and Jill Quevedo, a social relationship like \"college roommate\" is specific, concrete, and does not contradict any existing family connections.)",
+      "src_family_idx": 2,
+      "dst_family_idx": 7
+    },
+    {
+      "type": "relationship",
+      "src": "Marie Swirsky",
+      "dst": "Delores Watts",
+      "relationship": "Childhood friend",
+      "src_family_idx": 3,
+      "dst_family_idx": 5
+    },
+    {
+      "type": "relationship",
+      "src": "Marvin Swirsky",
+      "dst": "Kathy Watts",
+      "relationship": "Business partner**  \n\n(Explanation: Marvin Swirsky and Kathy Watts could have met through Marie Swirsky and Delores Watts' childhood friendship, leading to a professional collaboration.)",
+      "src_family_idx": 3,
+      "dst_family_idx": 5
+    },
+    {
+      "type": "relationship",
+      "src": "James Schoenthal",
+      "dst": "Donald Hill",
+      "relationship": "Childhood friend",
+      "src_family_idx": 1,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Emily Bigley",
+      "dst": "Jerry Hill",
+      "relationship": "Childhood friend",
+      "src_family_idx": 0,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Edwin Bigley",
+      "dst": "Deborah Hill",
+      "relationship": "college roommate",
+      "src_family_idx": 0,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Beth Kluesner",
+      "dst": "Carol Hill",
+      "relationship": "Childhood friend",
+      "src_family_idx": 2,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "David Kluesner",
+      "dst": "Jerry Hill",
+      "relationship": "College Roommate**  \n\n(Explanation: Since Beth Kluesner and Carol Hill are childhood friends, it\u2019s plausible that David Kluesner and Jerry Hill, being siblings of Beth and Carol respectively, could have crossed paths during their college years and become roommates.)",
+      "src_family_idx": 2,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Marvin Swirsky",
+      "dst": "Ronald Ortega",
+      "relationship": "Business partners",
+      "src_family_idx": 3,
+      "dst_family_idx": 9
+    },
+    {
+      "type": "relationship",
+      "src": "Marie Swirsky",
+      "dst": "Nicole Ortega",
+      "relationship": "Book club member**  \n\n(Marie Swirsky and Nicole Ortega met through their mutual connection to Marvin Swirsky and Ronald Ortega's business partnership, and later discovered a shared love for literature, joining the same book club.)",
+      "src_family_idx": 3,
+      "dst_family_idx": 9
+    },
+    {
+      "type": "relationship",
+      "src": "Monica Schoenthal",
+      "dst": "Eric Quevedo",
+      "relationship": "Childhood friend",
+      "src_family_idx": 1,
+      "dst_family_idx": 7
+    },
+    {
+      "type": "relationship",
+      "src": "Edwin Bigley",
+      "dst": "Kathy Watts",
+      "relationship": "Childhood friend",
+      "src_family_idx": 0,
+      "dst_family_idx": 5
+    },
+    {
+      "type": "relationship",
+      "src": "Helen Bigley",
+      "dst": "Frank Watts",
+      "relationship": "Former coworker",
+      "src_family_idx": 0,
+      "dst_family_idx": 5
+    },
+    {
+      "type": "relationship",
+      "src": "William Swirsky",
+      "dst": "Donald Portillo",
+      "relationship": "Childhood friend",
+      "src_family_idx": 3,
+      "dst_family_idx": 6
+    },
+    {
+      "type": "relationship",
+      "src": "James Swirsky",
+      "dst": "Thomas Portillo",
+      "relationship": "Business partner**  \n\n(Explanation: James Swirsky and Thomas Portillo could have met through William Swirsky and Donald Portillo's childhood friendship, leading to a professional collaboration later in life.)",
+      "src_family_idx": 3,
+      "dst_family_idx": 6
+    },
+    {
+      "type": "relationship",
+      "src": "Mildred Quevedo",
+      "dst": "Carol Hill",
+      "relationship": "Former coworker",
+      "src_family_idx": 7,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Donald Portillo",
+      "dst": "Jill Quevedo",
+      "relationship": "college roommate",
+      "src_family_idx": 6,
+      "dst_family_idx": 7
+    },
+    {
+      "type": "relationship",
+      "src": "Donald Hill",
+      "dst": "Lisa Ortega",
+      "relationship": "Childhood friend",
+      "src_family_idx": 8,
+      "dst_family_idx": 9
+    },
+    {
+      "type": "relationship",
+      "src": "Delores Watts",
+      "dst": "Ronald Ortega",
+      "relationship": "Former coworker",
+      "src_family_idx": 5,
+      "dst_family_idx": 9
+    },
+    {
+      "type": "relationship",
+      "src": "William Swirsky",
+      "dst": "Jerry Hill",
+      "relationship": "Childhood friend",
+      "src_family_idx": 3,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "James Swirsky",
+      "dst": "Donald Hill",
+      "relationship": "Business partner",
+      "src_family_idx": 3,
+      "dst_family_idx": 8
+    },
+    {
+      "type": "relationship",
+      "src": "Helen Bigley",
+      "dst": "Marvin Swirsky",
+      "relationship": "Former coworker",
+      "src_family_idx": 0,
+      "dst_family_idx": 3
+    },
+    {
+      "type": "relationship",
+      "src": "Emily Bigley",
+      "dst": "Mark Swirsky",
+      "relationship": "college roommate",
+      "src_family_idx": 0,
+      "dst_family_idx": 3
+    }
+  ]
+}

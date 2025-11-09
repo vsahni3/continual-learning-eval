@@ -1,0 +1,7 @@
+cohere
+requests
+names
+networkx
+matplotlib
+pyvis
+python-dotenv
