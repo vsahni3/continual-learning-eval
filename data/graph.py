@@ -13,7 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
-
+# cool, can we also create a flat text timeline for every event that happened from the graph
+# so we can test RAG and in context learning of existing models
 """
 WORKFLOW: Family Graph Generation with Cross-Family Connections
 
@@ -55,13 +56,13 @@ DATA STRUCTURE:
     }
   ]
 }
-
+us
 VISUALIZATION:
 - Static (matplotlib): Blue edges for intra-family, green dashed for cross-family
 - Interactive (pyvis): Family-colored nodes, bright green dashed edges for cross-family
 """
 
-def retry(fn, *args, **kwargs):
+def retry(fn: callable, *args, **kwargs) -> any:
     for i in range(10):
         try:
             return fn(*args, **kwargs)
@@ -70,7 +71,7 @@ def retry(fn, *args, **kwargs):
             time.sleep(1 + i*0.3)
     raise RuntimeError("Failed after 10 retries")
 
-def prompt_gpt(prompt, is_staging=False):
+def prompt_gpt(prompt: str, is_staging: bool = False) -> str:
     api_key = os.getenv("COHERE_API_KEY")
 
     url = "https://stg.api.cohere.ai/compatibility/v1/chat/completions" if is_staging else "https://api.cohere.ai/compatibility/v1/chat/completions"
@@ -102,17 +103,17 @@ def prompt_gpt(prompt, is_staging=False):
 
     return content
 
-def generate_relationship_from_prompt(prompt):
-    def inner():
+def generate_relationship_from_prompt(prompt: str) -> str:
+    def inner() -> str:
         relationship = prompt_gpt(prompt)
         parsed_relationship = relationship.split("Relationship:")[-1].strip().strip('**')
         return parsed_relationship
     return retry(inner)
 
 
-def generate_intra_family_relationship(name1, name2, existing_relationships, family_members):
+def generate_intra_family_relationship(name1: str, name2: str, existing_relationships: list, family_members: list) -> str:
     """Generate relationship between two family members with context of existing relationships"""
-    def inner():
+    def inner() -> str:
         # Build context using existing relationships
         family_dict = {
             "members": family_members,
@@ -152,8 +153,8 @@ Stick to single word response, only provide the relationship under "Relationship
 
 
 
-def generate_random_events(name, num_events=1):
-    def inner():
+def generate_random_events(name: str, num_events: int = 1) -> list:
+    def inner() -> list:
         PROMPT = f"""
 Given this person's name: {name}, I need you to generate {num_events} different events that happened in their life. For each event, provide the following in json format:
 - time (in YYYY-MM-DD format)
@@ -171,7 +172,7 @@ IMPORTANT: Do not use markdown code blocks. Do not wrap the response in ```json 
     return retry(inner)
 
 
-def build_relationship_context(families, existing_cross_relationships=None):
+def build_relationship_context(families: list, existing_cross_relationships: list | None = None) -> str:
     """Build context string with all relationships - takes list of families"""
     context_parts = []
 
@@ -186,9 +187,9 @@ def build_relationship_context(families, existing_cross_relationships=None):
     return "\n".join(context_parts)
 
 
-def generate_cross_family_relationship(name1, name2, family1, family2, existing_cross_relationships):
+def generate_cross_family_relationship(name1: str, name2: str, family1: dict, family2: dict, existing_cross_relationships: list) -> str:
     """Generate a single cross-family relationship with context of existing relationships"""
-    def inner():
+    def inner() -> str:
         context = build_relationship_context([family1, family2], existing_cross_relationships)
 
         PROMPT = f"""
@@ -222,7 +223,7 @@ Relationship:
 GLOBAL_USED_NAMES = set()
 GLOBAL_USED_LAST_NAMES = set()
 
-def generate_unique_last_name():
+def generate_unique_last_name() -> str:
     """Generate a unique last name that hasn't been used before"""
     while True:
         last_name = names.get_last_name()
@@ -230,7 +231,7 @@ def generate_unique_last_name():
             GLOBAL_USED_LAST_NAMES.add(last_name)
             return last_name
 
-def generate_unique_names(n, last_name=None):
+def generate_unique_names(n: int, last_name: str | None = None) -> list:
     """Generate n unique names, optionally with a shared last name"""
     out = []
     while len(out) < n:
@@ -246,12 +247,12 @@ def generate_unique_names(n, last_name=None):
 
 print_lock = threading.Lock()
 
-def safe_print(*args, **kwargs):
+def safe_print(*args, **kwargs) -> None:
     with print_lock:
         print(*args, **kwargs)
 
 
-def add_cross_family_connections(graph, connection_ratio=0.4, max_family_pairs=None):
+def add_cross_family_connections(graph: dict, connection_ratio: float = 0.4, max_family_pairs: int | None = None) -> list:
     """
     Add cross-family connections with context-aware LLM generation
 
@@ -334,9 +335,9 @@ def add_cross_family_connections(graph, connection_ratio=0.4, max_family_pairs=N
     return cross_family_edges
 
 
-def build_family_graph(num_families=20, event_threads=10, num_events=1,
-                       add_cross_family=True, connection_ratio=0.4,
-                       max_family_pairs=None):
+def build_family_graph(num_families: int = 20, event_threads: int = 10, num_events: int = 1,
+                       add_cross_family: bool = True, connection_ratio: float = 0.4,
+                       max_family_pairs: int | None = None) -> dict:
     """
     Build a family graph with optional cross-family connections
 
@@ -440,13 +441,20 @@ def build_family_graph(num_families=20, event_threads=10, num_events=1,
     return graph
 
 
-def save_graph_to_file(graph, filename="family_graph.json"):
+def save_graph_to_file(graph: dict, filename: str = "family_graph.json") -> None:
     with open(filename, 'w') as f:
         json.dump(graph, f, indent=2)
     print(f"Graph saved to {filename}")
 
 
-def visualize_graph_matplotlib(graph, filename="family_graph.png"):
+def load_graph_from_file(filename: str = "family_graph.json") -> dict:
+    with open(filename, 'r') as f:
+        graph = json.load(f)
+    print(f"Graph loaded from {filename}")
+    return graph
+
+
+def visualize_graph_matplotlib(graph: dict, filename: str = "family_graph.png") -> None:
     G = nx.DiGraph()
 
     # Add intra-family nodes and edges
@@ -531,7 +539,7 @@ def visualize_graph_matplotlib(graph, filename="family_graph.png"):
     plt.close()
 
 
-def visualize_graph_interactive(graph, filename="family_graph.html"):
+def visualize_graph_interactive(graph: dict, filename: str = "family_graph.html") -> None:
     net = Network(height="900px", width="100%", bgcolor="#222222",
                   font_color="white", directed=True)
 
@@ -602,7 +610,55 @@ def visualize_graph_interactive(graph, filename="family_graph.html"):
     print(f"Open {filename} in your browser to explore the graph")
 
 
-def test_generate_random_events():
+def create_flat_timeline(graph: dict) -> tuple[str, list]:
+    """
+    Create a flat text timeline of all events from the graph, sorted chronologically.
+    """
+    all_events = []
+
+    # Collect all events from all families with their associated members
+    for family in graph["families"]:
+        # Create a mapping of event IDs to members
+        event_to_member = {}
+        for edge in family["edges"]:
+            if edge["type"] == "had_event":
+                event_to_member[edge["dst"]] = edge["src"]
+
+        # Collect events with their member info
+        for event in family["events"]:
+            member = event_to_member[event["id"]]
+            all_events.append({
+                "time": event["time"],
+                "member": member,
+                "title": event["title"],
+                "description": event["description"]
+            })
+
+    # Sort events chronologically by time
+    all_events.sort(key=lambda x: x["time"])
+
+    # Format as flat text timeline
+    timeline_lines = ["=" * 80, "=" * 80, "FLAT EVENT TIMELINE", "=" * 80, ""]
+
+    for event in all_events:
+        timeline_lines.extend([f"[{event['time']}] {event['member']}", f"  {event['title']}", f"  {event['description']}", ""])
+    timeline_lines.extend(["=" * 80, f"Total events: {len(all_events)}", "=" * 80])
+
+
+    return "\n".join(timeline_lines), all_events
+
+
+def save_timeline_to_file(graph: dict, filename: str = "timeline.txt") -> None:
+    """
+    Save the flat timeline to a text file
+    """
+    timeline, _ = create_flat_timeline(graph)
+    with open(filename, 'w') as f:
+        f.write(timeline)
+    print(f"Timeline saved to {filename}")
+
+
+def test_generate_random_events() -> None:
     name = "Sungjin Hong"
     events = generate_random_events(name)
     print(f'Events for {name}: {json.dumps(events, indent=2)}')
@@ -612,6 +668,10 @@ def test_generate_random_events():
 
 
 if __name__ == "__main__":
+    # g = load_graph_from_file("family_graph.json")
+    # timeline, events = create_flat_timeline(g)
+    # save_timeline_to_file(g, "timeline.txt")
+
     print("Generating family graph with cross-family connections...")
 
     # Configuration for cross-family connections
@@ -636,6 +696,9 @@ if __name__ == "__main__":
     print("\nCreating interactive visualization...")
     visualize_graph_interactive(graph, "family_graph.html")
 
+    print("\nCreating flat timeline for RAG/in-context learning...")
+    save_timeline_to_file(graph, "timeline.txt")
+
     print("\n=== Graph Summary ===")
     print(f"Total families: {len(graph['families'])}")
     print(f"Total cross-family connections: {len(graph.get('cross_family_edges', []))}")
@@ -648,5 +711,6 @@ if __name__ == "__main__":
     print("  - family_graph.json (data)")
     print("  - family_graph.png (static visualization)")
     print("  - family_graph.html (interactive visualization)")
+    print("  - timeline.txt (flat text timeline for RAG/in-context learning)")
 
     breakpoint()
