@@ -110,18 +110,46 @@ def generate_relationship_from_prompt(prompt):
     return retry(inner)
 
 
-def generate_random_relationship(name1, name2):
-    PROMPT = f"""
-Given names of these 2 people in the same family: {name1} and {name2}, generate the relationship of {name2} to {name1}.
-Choose ONE specific family relationship:
-- Parent relations: father, mother
-- Sibling relations: brother, sister
-- Child relations: son, daughter
-Only provide the relationship of {name2} to {name1} under "Relationship:".
+def generate_intra_family_relationship(name1, name2, existing_relationships, family_members):
+    """Generate relationship between two family members with context of existing relationships"""
+    def inner():
+        # Build context using existing relationships
+        family_dict = {
+            "members": family_members,
+            "edges": existing_relationships
+        }
+        context = build_relationship_context([family_dict])
+
+        PROMPT = f"""
+{context}
+
+GOAL: Generate high-quality, realistic synthetic family data. These are traditional families with 2 parents and n children/siblings.
+
+Family structure:
+- 2 parents (mother, father) who are spouses
+- n children (son, daughter) who are siblings (brother, sister) to each other
+- Not all relationships must be included, but those that ARE must be contradiction-free
+
+CREATE a synthetic relationship: What is {name2} to {name1}? They are in the same family. 
+
+Diversity is important, make sure not every relationship is simply 'brother' or 'sister'.
+
+MUST pick from ONLY these exact types: "mother", "father", "son", "daughter", "brother", "sister", "spouse"
+DO NOT use uncle, aunt, niece, nephew, cousin, or any other relationship type.
+
+CRITICAL: NO CONTRADICTIONS with existing relationships - this must match a valid family tree structure.
+
+Example: If A is brother of B, then B cannot be mother of A or spouse of A.
+
+Stick to single word response, only provide the relationship under "Relationship:".
 """.strip()
-    relationship = generate_relationship_from_prompt(PROMPT)
-    safe_print(f'Generated relationship of {name2} to {name1}: {relationship}')
-    return relationship
+        relationship = prompt_gpt(PROMPT)
+        parsed_relationship = relationship.split("Relationship:")[-1].strip().strip('**')
+        safe_print(f'Generated relationship of {name2} to {name1}: {parsed_relationship}')
+        print(PROMPT, parsed_relationship, '\n\n\n\n\n\n\n')
+        return parsed_relationship
+    return retry(inner)
+
 
 
 def generate_random_events(name, num_events=1):
@@ -137,53 +165,57 @@ IMPORTANT: Do not use markdown code blocks. Do not wrap the response in ```json 
 """.strip()
         events = prompt_gpt(PROMPT)
         parsed_events = events.split("Events:")[-1].strip()
-        parsed_events_evald = eval(parsed_events)
+        parsed_events_evald = json.loads(parsed_events)
         safe_print(f'Generated events for {name}: {json.dumps(parsed_events_evald, indent=2)}')
         return parsed_events_evald
     return retry(inner)
 
 
-def build_relationship_context(family1, family2, existing_cross_edges):
-    """Build context string with all relationships between two families"""
+def build_relationship_context(families, existing_cross_relationships=None):
+    """Build context string with all relationships - takes list of families"""
     context_parts = []
 
-    # Add family 1 intra-family relationships
-    for family in [family1, family2]:
-        context_parts.append(f"Family {family['members'][0].split()[-1] } members and relationships:")
+    for family in families:
+        context_parts.append(f"Family {family['members'][0].split()[-1]} members and relationships:")
         context_parts.extend(f"  - {edge['src']} is {edge['relationship']} to {edge['dst']}" for edge in family["edges"] if edge["type"] == "relationship")
 
-    # Add existing cross-family relationships
-    if existing_cross_edges:
-        context_parts.append(f"\nExisting relationships between the two families:")
-        context_parts.extend(f"  - {edge['src']} is {edge['relationship']} to {edge['dst']}" for edge in existing_cross_edges)
+    if existing_cross_relationships:
+        context_parts.append("\nExisting cross-family relationships:")
+        context_parts.extend(f"  - {rel['src']} is {rel['relationship']} to {rel['dst']}" for rel in existing_cross_relationships)
 
     return "\n".join(context_parts)
 
 
-def generate_cross_family_relationship_with_context(person1, person2, family1, family2, existing_cross_edges):
-    """Generate a relationship between two people from different families with full context"""
-    context = build_relationship_context(family1, family2, existing_cross_edges)
+def generate_cross_family_relationship(name1, name2, family1, family2, existing_cross_relationships):
+    """Generate a single cross-family relationship with context of existing relationships"""
+    def inner():
+        context = build_relationship_context([family1, family2], existing_cross_relationships)
 
-    PROMPT = f"""
+        PROMPT = f"""
 {context}
 
-Create a specific fictional relationship between {person1} and {person2}.
+GOAL: Generate high-quality, realistic synthetic cross-family relationship data with DIVERSE types. We need variety - if everything is cousin, that's bad data. Mix family relations with social connections (friends, coworkers) and activity-based relationships.
 
-Based on the existing relationships, infer a concrete connection. Choose ONE specific relationship type:
-- Family relations: cousin, second cousin, in-laws, uncle/aunt through marriage
-- Social relations: childhood friend, college roommate, coworker, neighbor, business partner
-- Activity-based: tennis partner, book club member, volunteer together, gym buddies
+CREATE a synthetic relationship: What is {name2} to {name1}? They are from different families.
 
-Rules:
-1. Return ONLY the relationship type (e.g., "childhood friend", "cousin", "former coworker")
-2. Be specific and concrete, not vague
-3. Make it consistent with existing family connections if applicable
+Relationship types:
+- Family: cousin, second cousin, in-laws, uncle, aunt
+- Social: childhood friend, college roommate, coworker, neighbor, business partner
+- Activity: tennis partner, book club member, gym buddy
 
-Relationship:""".strip()
+Pick to maximize diversity - include plenty of non-family types like friend, coworker, neighbor.
 
-    relationship = generate_relationship_from_prompt(PROMPT)
-    safe_print(f'Generated cross-family relationship: {person1} is {relationship} to {person2}')
-    return relationship
+CRITICAL: Extended family relationships must be consistent. Example: if Theresa and Kevin are siblings, and Theresa is John's cousin, then Kevin must also be John's cousin.
+
+FORMAT: Output ONLY the relationship type (1-3 words max). No explanations, no notes, no markdown.
+
+Relationship:
+""".strip()
+        relationship = prompt_gpt(PROMPT)
+        parsed_relationship = relationship.split("Relationship:")[-1].strip().strip('**')
+        safe_print(f'Generated cross-family relationship of {name2} to {name1}: {parsed_relationship}')
+        return parsed_relationship
+    return retry(inner)
 
 
 
@@ -255,72 +287,46 @@ def add_cross_family_connections(graph, connection_ratio=0.4, max_family_pairs=N
         # Track edges between this specific family pair
         edges_between_families = []
 
-        # Calculate target number of connections
-        total_people = len(family1["members"]) + len(family2["members"])
-        target_connections = max(1, int(total_people * connection_ratio / 2))
+        # Calculate target number of connections using combinatorics
+        # Max possible connections = family1_size * family2_size
+        max_possible_connections = (len(family1["members"]) * len(family2["members"]))
+        target_connections = max(1, int(max_possible_connections * connection_ratio))
 
-        # Track how many connections each person has
-        family1_connection_count = {m: 0 for m in family1["members"]}
-        family2_connection_count = {m: 0 for m in family2["members"]}
+        # Generate relationships one at a time with context
+        # Sort pairs by sum of connections and go in order of minimum
+        safe_print(f"[{datetime.now()}] Generating {target_connections} relationships one at a time with context...")
 
-        # Create all connections with context-aware generation
-        safe_print(f"[{datetime.now()}] Creating context-aware connections (target: {target_connections})...")
-        attempts = 0
-        max_attempts = target_connections * 3  # Avoid infinite loops
+        # Track connection counts for each member
+        connection_counts = {member: 0 for member in family1["members"] + family2["members"]}
 
-        while len(edges_between_families) < target_connections and attempts < max_attempts:
-            attempts += 1
+        for _ in range(target_connections):
+            # Create all possible pairs and sort by sum of connections
+            all_pairs = [(m1, m2, connection_counts[m1] + connection_counts[m2])
+                        for m1 in family1["members"]
+                        for m2 in family2["members"]]
+            all_pairs.sort(key=lambda x: x[2], reverse=True)  # Sort by sum of connections
 
-            # Create all possible pairs and filter out existing connections
-            all_possible_pairs = [
-                (p1, p2) for p1 in family1["members"] for p2 in family2["members"]
-            ]
+            # Pick the pair with minimum connections
+            member1, member2, _ = all_pairs.pop()
 
-            # Filter out pairs that already have a connection
-            available_pairs = [
-                (p1, p2) for p1, p2 in all_possible_pairs
-                if not any(
-                    (e["src"] == p1 and e["dst"] == p2) or
-                    (e["src"] == p2 and e["dst"] == p1)
-                    for e in edges_between_families
-                )
-            ]
-
-            if not available_pairs:
-                # No valid pairs left
-                break
-
-            # Sort pairs by sum of connections (ascending), with random tiebreaker
-            available_pairs.sort(key=lambda pair: (
-                family1_connection_count[pair[0]] + family2_connection_count[pair[1]],
-                random.random()
-            ))
-
-            # Pick the pair with lowest total connections
-            person1, person2 = available_pairs[0]
-
-            # Generate relationship with full context
-            rel = generate_cross_family_relationship_with_context(
-                person1, person2, family1, family2, edges_between_families
-            )
+            safe_print(f"[{datetime.now()}] start cross-family relationship for {member1} -> {member2}")
+            rel = generate_cross_family_relationship(member1, member2, family1, family2, edges_between_families)
+            safe_print(f"[{datetime.now()}] finished cross-family relationship {member1} -> {member2}")
 
             edge = {
                 "type": "relationship",
-                "src": person1,
-                "dst": person2,
+                "src": member1,
+                "dst": member2,
                 "relationship": rel,
                 "src_family_idx": i,
                 "dst_family_idx": j
             }
-
             edges_between_families.append(edge)
             cross_family_edges.append(edge)
 
-            # Increment connection counts
-            family1_connection_count[person1] += 1
-            family2_connection_count[person2] += 1
-
-            safe_print(f"[{datetime.now()}] Context-aware connection {len(edges_between_families)}/{target_connections}: {person1} <-> {person2}")
+            # Update connection counts
+            connection_counts[member1] += 1
+            connection_counts[member2] += 1
 
         safe_print(f"[{datetime.now()}] Completed {len(edges_between_families)} connections for {family1_name} <-> {family2_name}")
 
@@ -395,12 +401,11 @@ def build_family_graph(num_families=20, event_threads=10, num_events=1,
 
         safe_print(f"[{datetime.now()}] generating relationships now for family {f+1}")
 
-        # relationships
         for m in members:
             safe_print(f"[{datetime.now()}] start relationship for {m}")
             possible_targets = [x for x in members if x != m]
             target = random.choice(possible_targets)
-            rel = generate_random_relationship(target, m)
+            rel = generate_intra_family_relationship(target, m, edges, members)
             safe_print(f"[{datetime.now()}] finished relationship {m} -> {target}")
             edges.append({
                 "type": "relationship",
@@ -603,11 +608,6 @@ def test_generate_random_events():
     print(f'Events for {name}: {json.dumps(events, indent=2)}')
 
 
-def test_generate_random_relationship():
-    name1 = "Sungjin Hong"
-    name2 = "Varun Hong"
-    relationship = generate_random_relationship(name1, name2)
-    print(f'Relationship of {name2} to {name1}: {relationship}')
 
 
 
@@ -616,12 +616,12 @@ if __name__ == "__main__":
 
     # Configuration for cross-family connections
     NUM_FAMILIES = 10  # Generate 3 families
-    CONNECTION_RATIO = 0.5  # % of people get cross-family connections
+    CONNECTION_RATIO = 0.4  # % of people get cross-family connections
     MAX_FAMILY_PAIRS = 20
 
     graph = build_family_graph(
         num_families=NUM_FAMILIES,
-        event_threads=5,
+        event_threads=10,
         num_events=10,
         add_cross_family=True,
         connection_ratio=CONNECTION_RATIO,
