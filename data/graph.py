@@ -2,715 +2,619 @@ import requests
 import random
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 import names
 import networkx as nx
 import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 from pyvis.network import Network
 import os
 from dotenv import load_dotenv
 load_dotenv()
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
-# cool, can we also create a flat text timeline for every event that happened from the graph
-# so we can test RAG and in context learning of existing models
-"""
-WORKFLOW: Family Graph Generation with Cross-Family Connections
 
-This module generates synthetic family graphs with context-aware cross-family relationships
-using LLM-based generation for realistic and consistent connections.
+GLOBAL_USED_NAMES = set()
+print_lock = threading.Lock()
 
-INTRA-FAMILY GENERATION:
-For each family:
-- Generate 3-5 unique family members with shared last name (no duplicate names across entire graph)
-- Each member has a relationship edge with EXACTLY 1 other member (randomly assigned)
-- Generate 10 life events per member (with time, title, description)
-- Each event becomes a node with "had_event" edges to the member
+def safe_print(*args, **kwargs):
+    with print_lock:
+        print(*args, **kwargs)
 
-CROSS-FAMILY CONNECTIONS:
-- Connect multiple families with context-aware relationships
-- LLM generates relationships considering ALL existing connections between families
-- Ensures logical consistency (e.g., if A is B's cousin and C is A's sibling, then C should also be B's cousin)
-- All connections generated with full relationship context
-- Configurable density: 30-50% of people have cross-family connections
-- Optional: Can keep some families disjoint
-
-DATA STRUCTURE:
-{
-  "families": [
-    {
-      "members": [...],
-      "edges": [...],  # intra-family relationships and events
-      "events": [...]
-    }
-  ],
-  "cross_family_edges": [  # NEW: relationships between families
-    {
-      "type": "relationship",
-      "src": "Person1",
-      "dst": "Person2",
-      "relationship": "LLM-generated description",
-      "src_family_idx": 0,
-      "dst_family_idx": 1
-    }
-  ]
-}
-us
-VISUALIZATION:
-- Static (matplotlib): Blue edges for intra-family, green dashed for cross-family
-- Interactive (pyvis): Family-colored nodes, bright green dashed edges for cross-family
-"""
-
-def retry(fn: callable, *args, **kwargs) -> any:
+def retry(fn: callable, *args, **kwargs):
     for i in range(10):
         try:
             return fn(*args, **kwargs)
         except Exception as e:
-            safe_print(f"[{datetime.now()}] retry {i+1}/10 because: {e}")
+            safe_print(f"[{datetime.now()}] retry {i+1}/10: {e}")
             time.sleep(1 + i*0.3)
     raise RuntimeError("Failed after 10 retries")
 
 def prompt_gpt(prompt: str, is_staging: bool = False) -> str:
-    api_key = os.getenv("COHERE_API_KEY")
-
-    url = "https://stg.api.cohere.ai/compatibility/v1/chat/completions" if is_staging else "https://api.cohere.ai/compatibility/v1/chat/completions"
-
-    headers = {
+    url = f"https://{'stg.' if is_staging else ''}api.cohere.ai/compatibility/v1/chat/completions"
+    response = requests.post(url, headers={
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": f"bearer {api_key}"
-    }
-
-    payload = {
+        "Authorization": f"bearer {os.getenv('COHERE_API_KEY')}"
+    }, json={
         "model": "command-a-03-2025",
-        # "reasoning_effort": "high",
-        "messages": [
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ]
+        "messages": [{"role": "user", "content": prompt}]
+    }, timeout=2000)
+    response.raise_for_status()
+    return response.json()['choices'][0]['message']['content']
+
+def clean_json_response(response: str) -> str:
+    """Strip markdown code blocks from LLM response"""
+    response = response.strip()
+    if response.startswith("```"):
+        lines = response.split("\n")
+        response = "\n".join([l for l in lines if not l.startswith("```")])
+    return response
+
+def generate_person_nodes(num_people: int = 100) -> list[dict]:
+    people = []
+    for i in range(num_people):
+        full_name = None
+        while full_name is None or full_name in GLOBAL_USED_NAMES:
+            full_name = names.get_full_name()
+        GLOBAL_USED_NAMES.add(full_name)
+        people.append({"id": f"person_{i}", "name": full_name, "type": "person"})
+    safe_print(f"[{datetime.now()}] Generated {num_people} person nodes")
+    return people
+
+def generate_typed_nodes(num: int, node_type: str, examples: str) -> list[dict]:
+    """Generic function to generate location or event nodes"""
+    def inner() -> list[dict]:
+        response = prompt_gpt(f"""Generate {num} diverse {node_type} names for a social graph simulation.
+{examples}
+
+Return ONLY a JSON array: [{{"name": "Name", "type": "subtype"}}, ...]
+Do not use markdown code blocks.""")
+
+        data = json.loads(clean_json_response(response))
+        nodes = [{
+            "id": f"{node_type}_{i}",
+            "name": item["name"],
+            "subtype": item["type"],
+            "type": node_type
+        } for i, item in enumerate(data)]
+
+        safe_print(f"[{datetime.now()}] Generated {len(nodes)} {node_type} nodes")
+        return nodes
+    return retry(inner)
+
+def generate_location_nodes(num: int = 50) -> list[dict]:
+    return generate_typed_nodes(num, "location",
+        "Mix of cities, venues, institutions, places")
+
+def generate_event_nodes(num: int = 100) -> list[dict]:
+    return generate_typed_nodes(num, "event",
+        "Mix of concerts, conferences, social, sports, cultural events")
+
+def get_context(node_id: str, all_edges: list[dict], all_nodes_dict: dict, depth: int = 1) -> dict:
+    """Get context for a node within N hops (BFS)"""
+    edges_by_node = {}
+    for edge in all_edges:
+        edges_by_node.setdefault(edge["src"], []).append(edge)
+        edges_by_node.setdefault(edge["dst"], []).append(edge)
+
+    connected_edges = []
+    visited = set()
+    current_layer = {node_id}
+
+    for _ in range(depth):
+        next_layer = set()
+        for node in current_layer:
+            if node in visited:
+                continue
+            visited.add(node)
+            for edge in edges_by_node.get(node, []):
+                # print(edge["dst"] if edge["src"] == node else edge["src"])
+                if edge not in connected_edges:
+                    connected_edges.append(edge)
+                next_layer.add(edge["dst"] if edge["src"] == node else edge["src"])
+        current_layer = next_layer
+
+    # visited.remove(node_id)
+    connected_nodes = [all_nodes_dict[nid] for nid in visited.union(current_layer) - {node_id}]
+
+    # Format context
+    lines = [f"Context for {all_nodes_dict[node_id]['name']} at depth {depth}:"]
+    if not connected_edges:
+        lines.append("  No existing connections")
+    else:
+        lines.append(f"  {len(connected_edges)} edges, {len(connected_nodes)} nodes:")
+        for edge in connected_edges:
+            src = all_nodes_dict[edge["src"]]["name"]
+            dst = all_nodes_dict[edge["dst"]]["name"]
+            relation = edge.get('relation', '')
+            info = f"{src} --[{edge['type']}]--> {dst}"
+            if relation:
+                info += f" ({relation})"
+            info += f" [{edge['start_date']} to {edge['end_date']}]"
+            lines.append(f"    {info}")
+
+    return {
+        "connected_nodes": connected_nodes,
+        "connected_edges": connected_edges,
+        "context_text": "\n".join(lines)
     }
 
-    try:
-        response = requests.post(url, headers=headers, json=payload, timeout=2000)
-        response.raise_for_status()
-        content = response.json()['choices'][0]['message']['content']
-    except Exception as e:
-        print(f"Error during API request: {e}")
-        raise e
+EDGE_RULES = """
+EDGE TYPES & RULES:
 
-    return content
+1. person_to_person:
+   - Valid: friend, colleague, boss, employee, mentor, partner, cousin, in-law
+   - FORBIDDEN: parent, child, sibling, grandparent, grandchild (require matching surnames)
+   - NOTE: Some relationships (e.g., 'married', 'partner') may require corresponding event nodes (e.g., wedding event)
 
-def generate_relationship_from_prompt(prompt: str) -> str:
-    def inner() -> str:
-        relationship = prompt_gpt(prompt)
-        parsed_relationship = relationship.split("Relationship:")[-1].strip().strip('**')
-        return parsed_relationship
-    return retry(inner)
+2. person_to_location:
+   - Valid: lives_at, works_at, visited, frequent_visitor
 
+3. person_to_event:
+   - Valid: attended, organized, performed, spoke
 
-def generate_intra_family_relationship(name1: str, name2: str, existing_relationships: list, family_members: list) -> str:
-    """Generate relationship between two family members with context of existing relationships"""
-    def inner() -> str:
-        # Build context using existing relationships
-        family_dict = {
-            "members": family_members,
-            "edges": existing_relationships
-        }
-        context = build_relationship_context([family_dict])
+4. event_to_location:
+   - Valid: held_at
 
-        PROMPT = f"""
-{context}
+CONSISTENCY RULES:
+- Check existing contexts to avoid contradictions
+- Don't create duplicate edges between same nodes
+- Ensure relationship types are compatible with existing connections
+- Some edges may imply the existence of event nodes (e.g., marriage relationship requires wedding event)
 
-GOAL: Generate high-quality, realistic synthetic family data. These are traditional families with 2 parents and n children/siblings.
+DURATION RULES - duration_days must match the relation type:
+- Events (1-3 days): attended, organized, performed, spoke, held_at, visited
+- Medium-term (7-90 days): frequent_visitor, temporary colleague/mentor relationships
+- Long-term (90+ days): lives_at, works_at, friend, partner, boss, employee, family relations
+- NEVER assign long durations to event edges or short durations to stable relationships
+"""
 
-Family structure:
-- 2 parents (mother, father) who are spouses
-- n children (son, daughter) who are siblings (brother, sister) to each other
-- Not all relationships must be included, but those that ARE must be contradiction-free
+def generate_edges_batch(sampled_nodes: list[dict], contexts: dict[str, dict],
+                         current_date: str, target_edges: int,
+                         max_duration: int) -> list[dict]:
+    """Generate multiple edges in a single LLM call"""
 
-CREATE a synthetic relationship: What is {name2} to {name1}? They are in the same family. 
-
-Diversity is important, make sure not every relationship is simply 'brother' or 'sister'.
-
-MUST pick from ONLY these exact types: "mother", "father", "son", "daughter", "brother", "sister", "spouse"
-DO NOT use uncle, aunt, niece, nephew, cousin, or any other relationship type.
-
-CRITICAL: NO CONTRADICTIONS with existing relationships - this must match a valid family tree structure.
-
-Example: If A is brother of B, then B cannot be mother of A or spouse of A.
-
-Stick to single word response, only provide the relationship under "Relationship:".
-""".strip()
-        relationship = prompt_gpt(PROMPT)
-        parsed_relationship = relationship.split("Relationship:")[-1].strip().strip('**')
-        safe_print(f'Generated relationship of {name2} to {name1}: {parsed_relationship}')
-        print(PROMPT, parsed_relationship, '\n\n\n\n\n\n\n')
-        return parsed_relationship
-    return retry(inner)
+    def inner() -> list[dict]:
+        # Format nodes list
+        nodes_section = "NODES:\n"
+        contexts_section = "\nCONTEXTS:\n"
+        for i, node in enumerate(sampled_nodes, 1):
+            node_subtype = node.get("subtype", "")
+            subtype_str = f", type: {node_subtype}" if node_subtype else ""
+            nodes_section += f"{i}. {node['id']}: {node['name']} ({node['type']}{subtype_str})\n"
+            contexts_section += f"\n{contexts[node['id']]['context_text']}\n"
 
 
+        prompt = f"""You have {len(sampled_nodes)} nodes in a social graph for date {current_date}.
 
-def generate_random_events(name: str, num_events: int = 1) -> list:
-    def inner() -> list:
-        PROMPT = f"""
-Given this person's name: {name}, I need you to generate {num_events} different events that happened in their life. For each event, provide the following in json format:
-- time (in YYYY-MM-DD format)
-- title (of the event)
-- description (of the event)
+{nodes_section}
+{contexts_section}
 
-Only provide the events in a list of json formats under "Events:".
-IMPORTANT: Do not use markdown code blocks. Do not wrap the response in ```json or ```. Return only the raw JSON array.
-""".strip()
-        events = prompt_gpt(PROMPT)
-        parsed_events = events.split("Events:")[-1].strip()
-        parsed_events_evald = json.loads(parsed_events)
-        safe_print(f'Generated events for {name}: {json.dumps(parsed_events_evald, indent=2)}')
-        return parsed_events_evald
-    return retry(inner)
+TASK: Generate EXACTLY {target_edges} edges between these nodes.
 
+{EDGE_RULES}
 
-def build_relationship_context(families: list, existing_cross_relationships: list | None = None) -> str:
-    """Build context string with all relationships - takes list of families"""
-    context_parts = []
+Return ONLY a JSON array (no markdown):
+[
+  {{
+    "src": "node_id",
+    "dst": "node_id",
+    "type": "person_to_person|person_to_location|person_to_event|event_to_location",
+    "relation": "relationship type (e.g., friend, works_at, attended, held_at)",
+    "duration_days": 1-{max_duration}
+  }},
+  ...
+]
 
-    for family in families:
-        context_parts.append(f"Family {family['members'][0].split()[-1]} members and relationships:")
-        context_parts.extend(f"  - {edge['src']} is {edge['relationship']} to {edge['dst']}" for edge in family["edges"] if edge["type"] == "relationship")
+Generate diverse, realistic connections. Ensure internal consistency."""
 
-    if existing_cross_relationships:
-        context_parts.append("\nExisting cross-family relationships:")
-        context_parts.extend(f"  - {rel['src']} is {rel['relationship']} to {rel['dst']}" for rel in existing_cross_relationships)
+        response = clean_json_response(prompt_gpt(prompt))
+        edges_data = json.loads(response)
 
-    return "\n".join(context_parts)
+        # Validate and convert to edge objects
+        valid_node_ids = {n["id"] for n in sampled_nodes}
+        edges = []
 
+        for edge_data in edges_data:
+            # Validate node IDs
+            if edge_data["src"] not in valid_node_ids or edge_data["dst"] not in valid_node_ids:
+                safe_print(f"[{datetime.now()}] Skipping invalid node IDs: {edge_data['src']} -> {edge_data['dst']}")
+                continue
 
-def generate_cross_family_relationship(name1: str, name2: str, family1: dict, family2: dict, existing_cross_relationships: list) -> str:
-    """Generate a single cross-family relationship with context of existing relationships"""
-    def inner() -> str:
-        context = build_relationship_context([family1, family2], existing_cross_relationships)
-
-        PROMPT = f"""
-{context}
-
-GOAL: Generate high-quality, realistic synthetic cross-family relationship data with DIVERSE types. We need variety - if everything is cousin, that's bad data. Mix family relations with social connections (friends, coworkers) and activity-based relationships.
-
-CREATE a synthetic relationship: What is {name2} to {name1}? They are from different families.
-
-Relationship types:
-- Family: cousin, second cousin, in-laws, uncle, aunt
-- Social: childhood friend, college roommate, coworker, neighbor, business partner
-- Activity: tennis partner, book club member, gym buddy
-
-Pick to maximize diversity - include plenty of non-family types like friend, coworker, neighbor.
-
-CRITICAL: Extended family relationships must be consistent. Example: if Theresa and Kevin are siblings, and Theresa is John's cousin, then Kevin must also be John's cousin.
-
-FORMAT: Output ONLY the relationship type (1-3 words max). No explanations, no notes, no markdown.
-
-Relationship:
-""".strip()
-        relationship = prompt_gpt(PROMPT)
-        parsed_relationship = relationship.split("Relationship:")[-1].strip().strip('**')
-        safe_print(f'Generated cross-family relationship of {name2} to {name1}: {parsed_relationship}')
-        return parsed_relationship
-    return retry(inner)
-
-
-
-GLOBAL_USED_NAMES = set()
-GLOBAL_USED_LAST_NAMES = set()
-
-def generate_unique_last_name() -> str:
-    """Generate a unique last name that hasn't been used before"""
-    while True:
-        last_name = names.get_last_name()
-        if last_name not in GLOBAL_USED_LAST_NAMES:
-            GLOBAL_USED_LAST_NAMES.add(last_name)
-            return last_name
-
-def generate_unique_names(n: int, last_name: str | None = None) -> list:
-    """Generate n unique names, optionally with a shared last name"""
-    out = []
-    while len(out) < n:
-        if last_name:
-            first = names.get_first_name()
-            full = f"{first} {last_name}"
-        else:
-            full = names.get_full_name()
-        if full not in GLOBAL_USED_NAMES:
-            GLOBAL_USED_NAMES.add(full)
-            out.append(full)
-    return out
-
-print_lock = threading.Lock()
-
-def safe_print(*args, **kwargs) -> None:
-    with print_lock:
-        print(*args, **kwargs)
-
-
-def add_cross_family_connections(graph: dict, connection_ratio: float = 0.4, max_family_pairs: int | None = None) -> list:
-    """
-    Add cross-family connections with context-aware LLM generation
-
-    Args:
-        graph: The family graph with families
-        connection_ratio: Target ratio of people with cross-family connections (0.3-0.5)
-        max_family_pairs: Maximum number of family pairs to connect (None = connect all)
-
-    Returns:
-        List of cross-family edges
-    """
-    families = graph["families"]
-    num_families = len(families)
-    cross_family_edges = []
-
-    # Determine which family pairs to connect
-    all_pairs = [(i, j) for i in range(num_families) for j in range(i+1, num_families)]
-
-    # Optionally limit the number of pairs (to keep some families disjoint)
-    pairs_to_connect = random.sample(all_pairs, max_family_pairs) if max_family_pairs and max_family_pairs < len(all_pairs) else all_pairs
-
-    safe_print(f"[{datetime.now()}] Connecting {len(pairs_to_connect)} family pairs with context-aware relationships")
-
-    for pair_idx, (i, j) in enumerate(pairs_to_connect):
-        family1 = families[i]
-        family2 = families[j]
-
-        family1_name = family1["members"][0].split()[-1] 
-        family2_name = family2["members"][0].split()[-1] 
-
-        safe_print(f"[{datetime.now()}] Connecting families: {family1_name} <-> {family2_name} ({pair_idx+1}/{len(pairs_to_connect)})")
-
-        # Track edges between this specific family pair
-        edges_between_families = []
-
-        # Calculate target number of connections using combinatorics
-        # Max possible connections = family1_size * family2_size
-        max_possible_connections = (len(family1["members"]) * len(family2["members"]))
-        target_connections = max(1, int(max_possible_connections * connection_ratio))
-
-        # Generate relationships one at a time with context
-        # Sort pairs by sum of connections and go in order of minimum
-        safe_print(f"[{datetime.now()}] Generating {target_connections} relationships one at a time with context...")
-
-        # Track connection counts for each member
-        connection_counts = {member: 0 for member in family1["members"] + family2["members"]}
-
-        for _ in range(target_connections):
-            # Create all possible pairs and sort by sum of connections
-            all_pairs = [(m1, m2, connection_counts[m1] + connection_counts[m2])
-                        for m1 in family1["members"]
-                        for m2 in family2["members"]]
-            all_pairs.sort(key=lambda x: x[2], reverse=True)  # Sort by sum of connections
-
-            # Pick the pair with minimum connections
-            member1, member2, _ = all_pairs.pop()
-
-            safe_print(f"[{datetime.now()}] start cross-family relationship for {member1} -> {member2}")
-            rel = generate_cross_family_relationship(member1, member2, family1, family2, edges_between_families)
-            safe_print(f"[{datetime.now()}] finished cross-family relationship {member1} -> {member2}")
+            # Calculate end date
+            duration = min(edge_data["duration_days"], max_duration)
+            end_date = (datetime.strptime(current_date, "%Y-%m-%d") +
+                       timedelta(days=duration - 1)).strftime("%Y-%m-%d")
 
             edge = {
-                "type": "relationship",
-                "src": member1,
-                "dst": member2,
-                "relationship": rel,
-                "src_family_idx": i,
-                "dst_family_idx": j
+                "type": edge_data["type"],
+                "src": edge_data["src"],
+                "dst": edge_data["dst"],
+                "start_date": current_date,
+                "end_date": end_date,
+                "relation": edge_data.get("relation", "")
             }
-            edges_between_families.append(edge)
-            cross_family_edges.append(edge)
+            edges.append(edge)
 
-            # Update connection counts
-            connection_counts[member1] += 1
-            connection_counts[member2] += 1
+            safe_print(f"[{datetime.now()}] Created: {edge_data['src']} --[{edge_data['type']}]--> {edge_data['dst']}")
 
-        safe_print(f"[{datetime.now()}] Completed {len(edges_between_families)} connections for {family1_name} <-> {family2_name}")
+        safe_print(f"[{datetime.now()}] Batch generated {len(edges)} edges")
+        return edges
 
-    safe_print(f"[{datetime.now()}] Total cross-family connections created: {len(cross_family_edges)}")
-    return cross_family_edges
+    return retry(inner)
 
-
-def build_family_graph(num_families: int = 20, event_threads: int = 10, num_events: int = 1,
-                       add_cross_family: bool = True, connection_ratio: float = 0.4,
-                       max_family_pairs: int | None = None) -> dict:
-    """
-    Build a family graph with optional cross-family connections
+def ensure_node_consistency(newly_generated_edges: list[dict], all_nodes_dict: dict,
+                            contexts: dict[str, dict], current_date: str,
+                            max_duration: int, all_edges: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Use LLM to identify and generate any missing nodes needed for edge consistency.
 
     Args:
-        num_families: Number of families to generate
-        event_threads: Number of threads for parallel event generation
-        add_cross_family: Whether to add cross-family connections
-        connection_ratio: Ratio of people with cross-family connections
-        max_family_pairs: Maximum family pairs to connect (None = all pairs)
+        newly_generated_edges: List of edges just generated
+        all_nodes_dict: Dictionary of all existing nodes {id: node}
+        contexts: Dictionary of contexts for nodes involved in edges
+        current_date: Current date for new nodes
+        max_duration: Maximum duration for new edges in days
+        all_edges: All existing edges in the graph
 
     Returns:
-        Graph dictionary with families and optional cross_family_edges
+        Tuple of (new_nodes, new_edges) that were generated
     """
-    graph = {
-        "families": []
+    if not newly_generated_edges:
+        return [], []
+
+    def inner() -> tuple[list[dict], list[dict]]:
+        # Collect all unique node IDs from the new edges
+        involved_node_ids = set()
+        for edge in newly_generated_edges:
+            involved_node_ids.add(edge["src"])
+            involved_node_ids.add(edge["dst"])
+
+        # Format edges with node context
+        edges_section = "NEWLY GENERATED EDGES:\n"
+        for i, edge in enumerate(newly_generated_edges, 1):
+            src_node = all_nodes_dict[edge["src"]]
+            dst_node = all_nodes_dict[edge["dst"]]
+            edges_section += f"{i}. {src_node['name']} ({src_node['type']}) --[{edge['type']}: {edge.get('relation', 'N/A')}]--> "
+            edges_section += f"{dst_node['name']} ({dst_node['type']}) [{edge['start_date']} to {edge['end_date']}]\n"
+
+        # Get or compute context for involved nodes
+        contexts_section = "\nEXISTING CONTEXT (depth 1 around involved nodes):\n"
+        for node_id in involved_node_ids:
+            context = contexts[node_id]
+            contexts_section += f"\n{context['context_text']}\n"
+
+        prompt = """Analyze the following edges in a temporal social graph to identify missing nodes needed for consistency.
+
+IMPORTANT: Check the existing context carefully. If a required node already exists in the context, DO NOT create a duplicate.
+
+%s
+%s
+
+Current date: %s
+
+TASK: Identify any event or location nodes that SHOULD exist to support these edges but are missing.
+
+First, check the EXISTING CONTEXT to see if the required nodes already exist. Only suggest creating new nodes if they are NOT already present in the context.
+
+Examples of missing nodes:
+- If two people have "married" or "partner" relation, there should be a wedding event they both attended
+- If someone has a "started_job" relation, there might be a company/organization location
+- If people have a "graduated_together" relation, there might be a graduation ceremony event
+
+For each missing node you identify, also specify:
+1. What edges should connect to this new node (reference by the edge number above)
+2. The relation type for those new edges
+
+Return ONLY a JSON object (no markdown):
+{
+  "missing_nodes": [
+    {
+      "name": "Node name",
+      "type": "event|location",
+      "subtype": "specific type (e.g., wedding, graduation, company)",
+      "reasoning": "Why this node is needed",
+      "related_edge_numbers": [1, 2],
+      "new_edges": [
+        {
+          "src": "existing_node_id_from_original_edges OR NEW_NODE",
+          "dst": "existing_node_id_from_original_edges OR NEW_NODE",
+          "type": "person_to_event|person_to_location|event_to_location",
+          "relation": "attended|organized|held_at|etc",
+          "duration_days": 1
+        }
+      ]
+    }
+  ]
+}
+
+If NO missing nodes are needed, return: {"missing_nodes": []}
+
+Be conservative - only suggest nodes that are clearly implied by the edges.""" % (edges_section, contexts_section, current_date)
+
+        response = clean_json_response(prompt_gpt(prompt))
+        data = json.loads(response)
+
+        if not data.get("missing_nodes"):
+            safe_print(f"[{datetime.now()}] No missing nodes identified")
+            return [], []
+
+        new_nodes = []
+        new_edges = []
+
+        # Get next available IDs
+        existing_event_ids = [nid for nid in all_nodes_dict.keys() if nid.startswith("event_")]
+        existing_location_ids = [nid for nid in all_nodes_dict.keys() if nid.startswith("location_")]
+        next_event_id = max([int(eid.split("_")[1]) for eid in existing_event_ids] + [-1]) + 1
+        next_location_id = max([int(lid.split("_")[1]) for lid in existing_location_ids] + [-1]) + 1
+
+        for missing in data["missing_nodes"]:
+            # Create new node
+            node_type = missing["type"]
+            if node_type == "event":
+                node_id = f"event_{next_event_id}"
+                next_event_id += 1
+            else:  # location
+                node_id = f"location_{next_location_id}"
+                next_location_id += 1
+
+            new_node = {
+                "id": node_id,
+                "name": missing["name"],
+                "type": node_type,
+                "subtype": missing["subtype"]
+            }
+            new_nodes.append(new_node)
+            all_nodes_dict[node_id] = new_node  # Add to dict for edge creation
+
+
+            safe_print(f"[{datetime.now()}] Generated missing node: {node_id} - {missing['name']} ({missing['reasoning']})")
+            
+            # Create edges to this new node
+            for edge_data in missing.get("new_edges", []):
+                # Replace NEW_NODE with actual node_id in either src or dst
+                src = node_id if edge_data["src"] == "NEW_NODE" else edge_data["src"]
+                dst = node_id if edge_data["dst"] == "NEW_NODE" else edge_data["dst"]
+
+                duration = min(edge_data.get("duration_days", 1), max_duration)
+                end_date = (datetime.strptime(current_date, "%Y-%m-%d") +
+                           timedelta(days=duration - 1)).strftime("%Y-%m-%d")
+
+                new_edge = {
+                    "type": edge_data["type"],
+                    "src": src,
+                    "dst": dst,
+                    "start_date": current_date,
+                    "end_date": end_date,
+                    "relation": edge_data.get("relation", "")
+                }
+                new_edges.append(new_edge)
+                safe_print(f"[{datetime.now()}] Generated edge: {src} --[{edge_data['type']}]--> {dst}")
+
+        safe_print(f"[{datetime.now()}] Consistency check: {len(new_nodes)} nodes, {len(new_edges)} edges added")
+        return new_nodes, new_edges
+
+    return retry(inner)
+
+def build_temporal_graph(num_people: int, num_locations: int, num_events: int,
+                         start_date: str, num_days: int,
+                         nodes_per_day: int, edges_per_day: int,
+                         max_edge_duration_days: int) -> dict:
+    """Build temporal graph with day-by-day batch edge generation"""
+    safe_print(f"[{datetime.now()}] Starting: {num_people} people, {num_locations} locations, {num_events} events over {num_days} days")
+
+    # Generate all nodes
+    people = generate_person_nodes(num_people)
+    locations = generate_location_nodes(num_locations)
+    events = generate_event_nodes(num_events)
+    all_nodes = people + locations + events
+  
+    all_nodes_dict = {n["id"]: n for n in all_nodes}
+
+    # Generate edges day-by-day
+    all_edges = []
+    temporal_snapshots = {}
+    current_dt = datetime.strptime(start_date, "%Y-%m-%d")
+
+    for day_idx in range(num_days):
+        current_date = current_dt.strftime("%Y-%m-%d")
+        safe_print(f"\n[{datetime.now()}] Day {day_idx + 1}/{num_days}: {current_date}")
+
+        # Sample fewer nodes per day
+        sampled_nodes = random.sample(all_nodes, min(nodes_per_day, len(all_nodes)))
+        safe_print(f"[{datetime.now()}] Sampled {len(sampled_nodes)} nodes")
+
+        # Fetch context for all sampled nodes once
+        contexts = {}
+        for node in sampled_nodes:
+            contexts[node["id"]] = get_context(node["id"], all_edges, all_nodes_dict, depth=1)
+
+        # Single LLM call to generate all edges for the day
+        try:
+            daily_edges = generate_edges_batch(
+                sampled_nodes, contexts, current_date,
+                edges_per_day, max_edge_duration_days
+            )
+            print(daily_edges, '\n\n\n')
+
+            # Check for missing nodes needed for consistency
+            try:
+                new_nodes, new_edges = ensure_node_consistency(
+                    daily_edges, all_nodes_dict, contexts, current_date,
+                    max_edge_duration_days, all_edges
+                )
+
+                # Add new nodes to appropriate lists
+                for node in new_nodes:
+                    if node["type"] == "event":
+                        events.append(node)
+                    elif node["type"] == "location":
+                        locations.append(node)
+                    all_nodes.append(node)
+
+                # Add new edges to daily edges and all edges
+                daily_edges.extend(new_edges)
+
+            except Exception as e:
+                safe_print(f"[{datetime.now()}] Error in consistency check: {e}")
+
+            all_edges.extend(daily_edges)
+        except Exception as e:
+            safe_print(f"[{datetime.now()}] Error generating batch: {e}")
+            daily_edges = []
+
+        temporal_snapshots[current_date] = daily_edges
+        safe_print(f"[{datetime.now()}] Day {day_idx + 1} complete: {len(daily_edges)} edges")
+        current_dt += timedelta(days=1)
+
+    safe_print(f"\n[{datetime.now()}] Complete! Total edges: {len(all_edges)}")
+    return {
+        "nodes": {"people": people, "locations": locations, "events": events},
+        "edges": all_edges,
+        "temporal_snapshots": temporal_snapshots,
+        "metadata": {
+            "start_date": start_date,
+            "num_days": num_days,
+            "total_nodes": len(all_nodes),
+            "total_edges": len(all_edges),
+            "generation_date": datetime.now().isoformat()
+        }
     }
 
-    for f in range(num_families):
-        safe_print(f"[{datetime.now()}] start family {f+1}/{num_families}")
-
-        # Generate a unique last name for this family
-        family_last_name = generate_unique_last_name()
-        safe_print(f"[{datetime.now()}] family {f+1} last name: {family_last_name}")
-
-        fam_size = random.randint(3,5)
-        members = generate_unique_names(fam_size, last_name=family_last_name)
-
-        # event parallel
-        member_to_events = {}
-        with ThreadPoolExecutor(max_workers=event_threads) as ex:
-            futures = {}
-            for m in members:
-                safe_print(f"[{datetime.now()}] submitting events generation for member: {m}")
-                futures[ex.submit(generate_random_events, m, num_events)] = m
-
-            for fut in as_completed(futures):
-                m = futures[fut]
-                safe_print(f"[{datetime.now()}] finished events for member: {m}")
-                ev_list = fut.result()
-                member_to_events[m] = ev_list
-
-        safe_print(f"[{datetime.now()}] ALL events done for family {f+1}")
-
-        edges = []
-        events_nodes = []
-        # convert events → nodes
-        for m, evs in member_to_events.items():
-            for ev in evs:
-                ev_node_id = f"{m}_{ev['time']}_{random.randint(0,999999)}"
-                events_nodes.append({
-                    "id": ev_node_id,
-                    "type": "event",
-                    "time": ev['time'],
-                    "title": ev['title'],
-                    "description": ev['description']
-                })
-                edges.append({
-                    "type": "had_event",
-                    "src": m,
-                    "dst": ev_node_id
-                })
-
-        safe_print(f"[{datetime.now()}] generating relationships now for family {f+1}")
-
-        for m in members:
-            safe_print(f"[{datetime.now()}] start relationship for {m}")
-            possible_targets = [x for x in members if x != m]
-            target = random.choice(possible_targets)
-            rel = generate_intra_family_relationship(target, m, edges, members)
-            safe_print(f"[{datetime.now()}] finished relationship {m} -> {target}")
-            edges.append({
-                "type": "relationship",
-                "src": m,
-                "dst": target,
-                "relationship": rel
-            })
-
-        safe_print(f"[{datetime.now()}] finished family {f+1}")
-
-        graph["families"].append({
-            "members": members,
-            "edges": edges,
-            "events": events_nodes
-        })
-
-    safe_print(f"[{datetime.now()}] all families done")
-
-    # Add cross-family connections if requested
-    if add_cross_family and num_families > 1:
-        safe_print(f"[{datetime.now()}] starting cross-family connections...")
-        cross_family_edges = add_cross_family_connections(
-            graph,
-            connection_ratio=connection_ratio,
-            max_family_pairs=max_family_pairs,
-        )
-        graph["cross_family_edges"] = cross_family_edges
-        safe_print(f"[{datetime.now()}] cross-family connections complete")
-    else:
-        graph["cross_family_edges"] = []
-
-    return graph
-
-
-def save_graph_to_file(graph: dict, filename: str = "family_graph.json") -> None:
+def save_graph(graph: dict, filename: str = "temporal_graph.json"):
     with open(filename, 'w') as f:
         json.dump(graph, f, indent=2)
-    print(f"Graph saved to {filename}")
+    print(f"Saved: {filename}")
 
+def create_timeline(graph: dict) -> str:
+    """Create human-readable timeline"""
+    all_nodes = {n["id"]: n for nt in ["people", "locations", "events"]
+                 for n in graph["nodes"][nt]}
 
-def load_graph_from_file(filename: str = "family_graph.json") -> dict:
-    with open(filename, 'r') as f:
-        graph = json.load(f)
-    print(f"Graph loaded from {filename}")
-    return graph
+    lines = ["=" * 80, "TEMPORAL GRAPH TIMELINE", "=" * 80, ""]
 
+    for date in sorted(graph["temporal_snapshots"].keys()):
+        edges = graph["temporal_snapshots"][date]
+        lines.append(f"[{date}] {len(edges)} edges:")
+        for e in edges:
+            src = all_nodes[e["src"]]["name"]
+            dst = all_nodes[e["dst"]]["name"]
+            relation = e.get('relation', '')
+            desc = f"  {src} --[{e['type']}]--> {dst}"
+            if relation:
+                desc += f" ({relation})"
+            desc += f" [ends: {e['end_date']}]"
+            lines.append(desc)
+        lines.append("")
 
-def visualize_graph_matplotlib(graph: dict, filename: str = "family_graph.png") -> None:
+    lines.extend(["=" * 80, f"Total: {len(graph['edges'])} edges", "=" * 80])
+    return "\n".join(lines)
+
+def save_timeline(graph: dict, filename: str = "temporal_timeline.txt"):
+    with open(filename, 'w') as f:
+        f.write(create_timeline(graph))
+    print(f"Saved: {filename}")
+
+def visualize_matplotlib(graph: dict, filename: str = "temporal_graph.png"):
+    """Static visualization"""
     G = nx.DiGraph()
+    all_nodes = {n["id"]: n for nt in ["people", "locations", "events"]
+                 for n in graph["nodes"][nt]}
 
-    # Add intra-family nodes and edges
-    for family_idx, family in enumerate(graph["families"]):
-        for member in family["members"]:
-            G.add_node(member, node_type="person", family=family_idx)
+    for nid, node in all_nodes.items():
+        G.add_node(nid, node_type=node["type"], name=node["name"])
 
-        # Add event nodes
-        for event in family["events"]:
-            G.add_node(event["id"], node_type="event",
-                      title=event["title"], family=family_idx)
+    for e in graph["edges"]:
+        G.add_edge(e["src"], e["dst"], edge_type=e["type"],
+                  start_date=e["start_date"], end_date=e["end_date"], relation=e.get("relation", ""))
 
-        for edge in family["edges"]:
-            if edge["type"] == "had_event":
-                G.add_edge(edge["src"], edge["dst"], edge_type="had_event")
-            elif edge["type"] == "relationship":
-                G.add_edge(edge["src"], edge["dst"],
-                          edge_type="intra_family_relationship",
-                          relationship=edge.get("relationship", ""))
-
-    # Add cross-family edges
-    if "cross_family_edges" in graph:
-        for edge in graph["cross_family_edges"]:
-            G.add_edge(edge["src"], edge["dst"],
-                      edge_type="cross_family_relationship",
-                      relationship=edge.get("relationship", ""))
-
-    pos = nx.spring_layout(G, k=2, iterations=50)
-
+    pos = nx.spring_layout(G, k=2, iterations=50, seed=42)
     plt.figure(figsize=(20, 16))
 
-    person_nodes = [n for n, d in G.nodes(data=True) if d.get("node_type") == "person"]
-    event_nodes = [n for n, d in G.nodes(data=True) if d.get("node_type") == "event"]
+    node_config = {
+        "person": ("lightblue", 'o', 2000),
+        "location": ("lightgreen", 's', 1500),
+        "event": ("orange", '^', 1500)
+    }
 
-    nx.draw_networkx_nodes(G, pos, nodelist=person_nodes,
-                          node_color='lightblue', node_size=3000,
-                          node_shape='o', alpha=0.9)
+    for ntype, (color, shape, size) in node_config.items():
+        nodes = [n for n, d in G.nodes(data=True) if d["node_type"] == ntype]
+        nx.draw_networkx_nodes(G, pos, nodelist=nodes, node_color=color,
+                              node_shape=shape, node_size=size, alpha=0.9, label=ntype.title())
 
-    nx.draw_networkx_nodes(G, pos, nodelist=event_nodes,
-                          node_color='orange', node_size=500,
-                          node_shape='s', alpha=0.6)
+    edge_colors = {"person_to_person": "blue", "person_to_location": "green",
+                   "person_to_event": "red", "event_to_location": "purple"}
 
-    # Separate edge types
-    intra_family_edges = [(u, v) for u, v, d in G.edges(data=True)
-                          if d.get("edge_type") == "intra_family_relationship"]
-    cross_family_edges = [(u, v) for u, v, d in G.edges(data=True)
-                          if d.get("edge_type") == "cross_family_relationship"]
-    event_edges = [(u, v) for u, v, d in G.edges(data=True)
-                  if d.get("edge_type") == "had_event"]
+    for etype, color in edge_colors.items():
+        elist = [(u, v) for u, v, d in G.edges(data=True) if d["edge_type"] == etype]
+        if elist:
+            nx.draw_networkx_edges(G, pos, edgelist=elist, edge_color=color,
+                                  width=1.5, alpha=0.6, arrows=True, arrowsize=15)
 
-    # Draw intra-family relationships in blue
-    nx.draw_networkx_edges(G, pos, edgelist=intra_family_edges,
-                          edge_color='blue', width=2, alpha=0.7,
-                          arrows=True, arrowsize=20)
+    labels = {n: all_nodes[n]["name"][:15] for n in G.nodes()}
+    nx.draw_networkx_labels(G, pos, labels=labels, font_size=6)
 
-    # Draw cross-family relationships in green
-    nx.draw_networkx_edges(G, pos, edgelist=cross_family_edges,
-                          edge_color='green', width=2.5, alpha=0.8,
-                          arrows=True, arrowsize=20, style='dashed')
-
-    # Draw event edges in gray
-    nx.draw_networkx_edges(G, pos, edgelist=event_edges,
-                          edge_color='gray', width=1, alpha=0.3,
-                          arrows=True, arrowsize=10)
-
-    person_labels = {n: n for n in person_nodes}
-    nx.draw_networkx_labels(G, pos, labels=person_labels, font_size=8)
-
-    # Add legend
-    legend_elements = [
-        Line2D([0], [0], color='blue', linewidth=2, label='Intra-family relationship'),
-        Line2D([0], [0], color='green', linewidth=2.5, linestyle='dashed', label='Cross-family relationship'),
-        Line2D([0], [0], color='gray', linewidth=1, label='Event connection')
-    ]
-    plt.legend(handles=legend_elements, loc='upper right', fontsize=10)
-
-    plt.title("Family Graph Visualization (with Cross-Family Connections)", fontsize=16)
+    plt.title("Temporal Graph", fontsize=16)
+    plt.legend(loc='upper right')
     plt.axis('off')
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight')
-    print(f"Static visualization saved to {filename}")
     plt.close()
+    print(f"Saved: {filename}")
 
-
-def visualize_graph_interactive(graph: dict, filename: str = "family_graph.html") -> None:
+def visualize_interactive(graph: dict, filename: str = "temporal_graph.html"):
+    """Interactive pyvis visualization"""
     net = Network(height="900px", width="100%", bgcolor="#222222",
                   font_color="white", directed=True)
+    net.set_options('{"physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -8000}}}')
 
-    # from claude sonnet:
-    net.set_options("""
-    {
-        "physics": {
-            "enabled": true,
-            "barnesHut": {
-                "gravitationalConstant": -8000,
-                "centralGravity": 0.3,
-                "springLength": 200,
-                "springConstant": 0.04
-            },
-            "minVelocity": 0.75
-        }
-    }
-    """)
+    node_colors = {"person": "#4ECDC4", "location": "#98D8C8", "event": "#FFA07A"}
 
-    # these colors are from claude sonnet
-    family_colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A',
-                     '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2']
+    for nt in ["people", "locations", "events"]:
+        for node in graph["nodes"][nt]:
+            net.add_node(node["id"], label=node["name"][:20],
+                        title=f"{node['type'].upper()}: {node['name']}",
+                        color=node_colors[node["type"]],
+                        size=30 if node["type"] == "person" else 20)
 
-    for family_idx, family in enumerate(graph["families"]):
-        color = family_colors[family_idx % len(family_colors)]
+    edge_colors = {"person_to_person": "#0000FF", "person_to_location": "#00FF00",
+                   "person_to_event": "#FF0000", "event_to_location": "#FF00FF"}
 
-        for member in family["members"]:
-            net.add_node(member,
-                        label=member,
-                        title=f"Family Member: {member}",
-                        color=color,
-                        size=30,
-                        shape='dot',
-                        font={'size': 20})
-
-        for event in family["events"]:
-            event_title = f"{event['title']}\n{event['time']}\n{event['description'][:50]}..."
-            net.add_node(event["id"],
-                        label="",
-                        title=event_title,
-                        color='#FFA500',
-                        size=10,
-                        shape='square')
-
-        for edge in family["edges"]:
-            if edge["type"] == "had_event":
-                net.add_edge(edge["src"], edge["dst"],
-                           color='#888888', width=1, arrows='to')
-            elif edge["type"] == "relationship":
-                rel_text = edge.get("relationship", "related to")
-                net.add_edge(edge["src"], edge["dst"],
-                           title=f"Intra-family: {rel_text}",
-                           color=color, width=3, arrows='to')
-
-    # Add cross-family edges in bright green
-    if "cross_family_edges" in graph:
-        for edge in graph["cross_family_edges"]:
-            rel_text = edge.get("relationship", "connected to")
-            net.add_edge(edge["src"], edge["dst"],
-                        title=f"Cross-family: {rel_text}",
-                        color='#00FF00',  # Bright green
-                        width=4,
-                        arrows='to',
-                        dashes=True)  # Dashed line to distinguish
+    for e in graph["edges"]:
+        relation = e.get('relation', '')
+        title = f"{e['type']}\n{e['start_date']} to {e['end_date']}"
+        if relation:
+            title += f"\n{relation}"
+        net.add_edge(e["src"], e["dst"], title=title,
+                    color=edge_colors[e["type"]], width=2, arrows='to')
 
     net.save_graph(filename)
-    print(f"Interactive visualization saved to {filename}")
-    print(f"Open {filename} in your browser to explore the graph")
-
-
-def create_flat_timeline(graph: dict) -> tuple[str, list]:
-    """
-    Create a flat text timeline of all events from the graph, sorted chronologically.
-    """
-    all_events = []
-
-    # Collect all events from all families with their associated members
-    for family in graph["families"]:
-        # Create a mapping of event IDs to members
-        event_to_member = {}
-        for edge in family["edges"]:
-            if edge["type"] == "had_event":
-                event_to_member[edge["dst"]] = edge["src"]
-
-        # Collect events with their member info
-        for event in family["events"]:
-            member = event_to_member[event["id"]]
-            all_events.append({
-                "time": event["time"],
-                "member": member,
-                "title": event["title"],
-                "description": event["description"]
-            })
-
-    # Sort events chronologically by time
-    all_events.sort(key=lambda x: x["time"])
-
-    # Format as flat text timeline
-    timeline_lines = ["=" * 80, "=" * 80, "FLAT EVENT TIMELINE", "=" * 80, ""]
-
-    for event in all_events:
-        timeline_lines.extend([f"[{event['time']}] {event['member']}", f"  {event['title']}", f"  {event['description']}", ""])
-    timeline_lines.extend(["=" * 80, f"Total events: {len(all_events)}", "=" * 80])
-
-
-    return "\n".join(timeline_lines), all_events
-
-
-def save_timeline_to_file(graph: dict, filename: str = "timeline.txt") -> None:
-    """
-    Save the flat timeline to a text file
-    """
-    timeline, _ = create_flat_timeline(graph)
-    with open(filename, 'w') as f:
-        f.write(timeline)
-    print(f"Timeline saved to {filename}")
-
-
-def test_generate_random_events() -> None:
-    name = "Sungjin Hong"
-    events = generate_random_events(name)
-    print(f'Events for {name}: {json.dumps(events, indent=2)}')
-
-
-
-
+    print(f"Saved: {filename}")
 
 if __name__ == "__main__":
-    # g = load_graph_from_file("family_graph.json")
-    # timeline, events = create_flat_timeline(g)
-    # save_timeline_to_file(g, "timeline.txt")
+    print("=" * 80 + "\nTEMPORAL GRAPH GENERATION\n" + "=" * 80)
 
-    print("Generating family graph with cross-family connections...")
+    graph = build_temporal_graph(num_people=100, num_locations=100, num_events=100,
+                                  start_date="2024-01-01", num_days=30,
+                                  nodes_per_day=10, edges_per_day=10, max_edge_duration_days=5000)
 
-    # Configuration for cross-family connections
-    NUM_FAMILIES = 10  # Generate 3 families
-    CONNECTION_RATIO = 0.4  # % of people get cross-family connections
-    MAX_FAMILY_PAIRS = 20
+    print("\n" + "=" * 80 + "\nSAVING OUTPUTS\n" + "=" * 80)
+    save_graph(graph)
+    save_timeline(graph)
+    visualize_matplotlib(graph)
+    visualize_interactive(graph)
 
-    graph = build_family_graph(
-        num_families=NUM_FAMILIES,
-        event_threads=10,
-        num_events=10,
-        add_cross_family=True,
-        connection_ratio=CONNECTION_RATIO,
-        max_family_pairs=MAX_FAMILY_PAIRS
-    )
+    print("\n" + "=" * 80 + "\nSUMMARY\n" + "=" * 80)
+    print(f"Nodes: {len(graph['nodes']['people'])} people, "
+          f"{len(graph['nodes']['locations'])} locations, "
+          f"{len(graph['nodes']['events'])} events")
+    print(f"Edges: {len(graph['edges'])} total, "
+          f"{len(graph['edges']) / graph['metadata']['num_days']:.1f} avg/day")
 
-    save_graph_to_file(graph, "family_graph.json")
+    edge_types = {}
+    for e in graph['edges']:
+        edge_types[e['type']] = edge_types.get(e['type'], 0) + 1
+    print("\nEdge breakdown:")
+    for et, count in sorted(edge_types.items()):
+        print(f"  {et}: {count}")
 
-    print("\nCreating static visualization...")
-    visualize_graph_matplotlib(graph, "family_graph.png")
-
-    print("\nCreating interactive visualization...")
-    visualize_graph_interactive(graph, "family_graph.html")
-
-    print("\nCreating flat timeline for RAG/in-context learning...")
-    save_timeline_to_file(graph, "timeline.txt")
-
-    print("\n=== Graph Summary ===")
-    print(f"Total families: {len(graph['families'])}")
-    print(f"Total cross-family connections: {len(graph.get('cross_family_edges', []))}")
-
-    for idx, family in enumerate(graph["families"]):
-        family_name = family["members"][0].split()[-1] if family["members"] else f"Family{idx}"
-        print(f"  {family_name}: {len(family['members'])} members")
-
-    print("\nVisualization files created:")
-    print("  - family_graph.json (data)")
-    print("  - family_graph.png (static visualization)")
-    print("  - family_graph.html (interactive visualization)")
-    print("  - timeline.txt (flat text timeline for RAG/in-context learning)")
-
-    breakpoint()
+    print("\n" + "=" * 80)
+    print("Done! Open temporal_graph.html to explore")
