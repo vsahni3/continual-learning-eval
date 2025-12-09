@@ -3,10 +3,12 @@ import random
 import json
 import time
 from datetime import datetime, timedelta
+
 import names
 import networkx as nx
 import matplotlib.pyplot as plt
 from pyvis.network import Network
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -183,7 +185,6 @@ def generate_edges_batch(sampled_nodes: list[dict], contexts: dict[str, dict],
             nodes_section += f"{i}. {node['id']}: {node['name']} ({node['type']}{subtype_str})\n"
             contexts_section += f"\n{contexts[node['id']]['context_text']}\n"
 
-
         prompt = f"""You have {len(sampled_nodes)} nodes in a social graph for date {current_date}.
 
 {nodes_section}
@@ -304,6 +305,13 @@ For each missing node you identify, also specify:
 1. What edges should connect to this new node (reference by the edge number above)
 2. The relation type for those new edges
 
+You MUST use node IDs, not names.
+
+Allowed existing node IDs for src/dst are:
+%s
+
+If the edge involves the new node, use "NEW_NODE".
+
 Return ONLY a JSON object (no markdown):
 {
   "missing_nodes": [
@@ -328,7 +336,7 @@ Return ONLY a JSON object (no markdown):
 
 If NO missing nodes are needed, return: {"missing_nodes": []}
 
-Be conservative - only suggest nodes that are clearly implied by the edges.""" % (edges_section, contexts_section, current_date)
+Be conservative - only suggest nodes that are clearly implied by the edges.""" % (edges_section, contexts_section, current_date, ', '.join(involved_node_ids))
 
         response = clean_json_response(prompt_gpt(prompt))
         data = json.loads(response)
@@ -377,7 +385,7 @@ Be conservative - only suggest nodes that are clearly implied by the edges.""" %
                 duration = min(edge_data.get("duration_days", 1), max_duration)
                 end_date = (datetime.strptime(current_date, "%Y-%m-%d") +
                            timedelta(days=duration - 1)).strftime("%Y-%m-%d")
-
+                
                 new_edge = {
                     "type": edge_data["type"],
                     "src": src,
